@@ -1,0 +1,128 @@
+@use "sass:map";
+
+// どっちファーストの設定（sp または pc）
+$startFrom: sp;
+
+// @if内で設定する変数を、先に宣言しておく
+$breakpoints: (
+);
+$mediaqueries: (
+);
+
+@if $startFrom ==sp {
+  // SPファースト
+  $breakpoints: (
+    sm: 600,
+    md: 768,
+    lg: 1024,
+    xl: 1440,
+  );
+
+  $mediaqueries: (
+    sm: "(min-width: #{map.get($breakpoints, sm)}px)",
+    md: "(min-width: #{map.get($breakpoints, md)}px)",
+    lg: "(min-width: #{map.get($breakpoints, lg)}px)",
+    xl: "(min-width: #{map.get($breakpoints, xl)}px)",
+  );
+} @else {
+    // PCファースト
+    $breakpoints: (
+      xl: 1440,
+      lg: 1023,
+      md: 767,
+      sm: 600,
+    );
+
+    // 大きい画面から小さい画面へ
+    $mediaqueries: (
+      xl: "(min-width: #{map.get($breakpoints, xl)}px)",
+      lg: "(max-width: #{map.get($breakpoints, lg)}px)",
+      md: "(max-width: #{map.get($breakpoints, md)}px)",
+      sm: "(max-width: #{map.get($breakpoints, sm)}px)",
+    );
+}
+
+// @include mq() {} でブレークポイントを反映
+// 引数を省略した場合は md
+@mixin mq($mediaquery: md) {
+  @if $startFrom ==sp {
+    @media (min-width: #{map.get($breakpoints, $mediaquery)}px) {
+      @content;
+    }
+  }
+
+  @else {
+    @if $mediaquery ==xl {
+      @media (min-width: #{map.get($breakpoints, $mediaquery)}px) {
+        @content;
+      }
+    }
+
+    @else {
+      @media (max-width: #{map.get($breakpoints, $mediaquery)}px) {
+        @content;
+      }
+    }
+  }
+}
+// @mixin mq($mediaquery: md) {
+//   @media #{map.get($mediaqueries, $mediaquery)} {
+//     @content;
+//   }
+// }
+
+// PC、SPの表示非表示
+@if $startFrom ==sp {
+  //pcで表示
+  .pc {
+    display: none;
+
+    @include mq(md) {
+      display: block !important;
+    }
+  }
+
+  //モバイルのみ表示
+  .sp {
+    @include mq(md) {
+      display: none !important;
+    }
+  }
+} @else {
+  //pcで表示
+  .pc {
+    display: block;
+
+    @include mq(md) {
+      display: none !important;
+    }
+  }
+
+  //モバイルのみ表示
+  .sp {
+    display: none;
+
+    @include mq(md) {
+      display: block !important;
+    }
+  }
+}
+
+// spで改行、pcでは横並び
+@if $startFrom ==sp {
+  .line-break {
+    display: inline-block;
+  
+    @include mq(md) {
+      display: inline;
+    }
+  }
+} @else {
+  .line-break {
+    display: inline;
+
+    @include mq(md) {
+      display: inline-block;
+    }
+  }
+}

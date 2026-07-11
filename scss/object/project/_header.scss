@@ -1,0 +1,14 @@
+@use "../../global" as *;
+@use "sass:math";
+
+// ヘッダー
+.header h1 {
+  color: red;
+  font-size: 50px;
+
+  @include mq(md) {
+    color: black;
+    font-size: 16px;    
+  }
+
+}

@@ -1,0 +1,55 @@
+@use "../global" as *;
+@use "sass:math";
+
+/* ----------
+base
+------------ */
+html {
+  -webkit-appearance: none;
+  -webkit-text-size-adjust: 100%;
+  word-break: break-all;
+  scroll-behavior: smooth;
+  font-size: 10px;
+}
+
+body {
+  font-family: "Yu Mincho", "YuMincho", serif;
+  font-optical-sizing: auto;
+  font-weight: $font-medium;
+  color: $color-main;
+  font-size: 1.6rem;
+  line-height: calc(25 / 16);
+  letter-spacing: 0;
+
+  color: red;
+}
+
+body.is-fixed {
+  overflow: hidden;
+}
+
+// はみ出し保険
+#container {
+  width: 100%;
+  // 最後につけるのがいいかも
+  // overflow: hidden;
+}
+
+/* ----------
+common
+------------ */
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+section {
+  padding-inline: 30px;
+  scroll-margin-top: $header-height;
+
+  @include mq(sp) {
+    scroll-margin-top: $header-height-sp;
+  }
+}
+

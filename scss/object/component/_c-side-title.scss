@@ -1,0 +1,18 @@
+@use "../../global" as *;
+@use "sass:math";
+
+// サイドバーのタイトル
+.c-side-title {
+  background-color: $color-main;
+  width: 100%;
+  text-align: center;
+}
+
+.c-side-title {
+  font-size: 1.8rem;
+  // line-height: calc(33 / 18);
+  line-height: calc(50 / 18);
+  font-weight: $font-bold;
+  color: $color-white;
+
+}

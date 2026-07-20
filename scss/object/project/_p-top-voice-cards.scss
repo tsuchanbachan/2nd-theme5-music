@@ -1,0 +1,10 @@
+@use "../../global" as *;
+@use "sass:math";
+
+.p-top-voice-cards {
+  @include mq(md) {
+    display: flex;
+    column-gap: calc(35 / 880 * 100%);
+    flex-wrap: wrap;
+  }
+}

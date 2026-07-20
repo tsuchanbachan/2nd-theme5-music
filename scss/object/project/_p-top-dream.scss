@@ -1,0 +1,40 @@
+@use "../../global" as *;
+@use "sass:math";
+
+.p-top-dream {
+  
+}
+.p-top-dream__text {
+  margin-top: 0.7rem;
+
+  @include mq(md) {
+    margin-top: 1.7rem;
+  }
+}
+
+.p-top-dream__text::after {
+  content:'';
+  display: block;
+  background: url("../image/about_arch-sp.png") no-repeat center / contain;
+  width: 100%;
+  aspect-ratio: 335 / 37.09;
+  margin-top: 2rem;
+
+  @include mq(md) {
+    background: url("../image/about_arch-pc.png") no-repeat center / contain;
+    margin-top: 3.4rem;
+  }
+}
+
+.p-top-dream__text p {
+  font-size: 1.8rem;
+  line-height: calc(30 / 18);
+
+  @include mq(md) {
+    text-align: center;
+  }
+}
+
+.p-top-dream__image {
+  margin-top: 100px;
+}

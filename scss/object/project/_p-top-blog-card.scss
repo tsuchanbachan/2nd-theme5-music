@@ -1,0 +1,46 @@
+@use "../../global" as *;
+@use "sass:math";
+
+// 卒業実績一覧のカード
+.p-top-blog-card {
+  width: 100%;
+
+  @include mq(md) {
+    width: calc(387 / 880 * 100%);
+  }
+}
+
+.p-top-blog-card__media {}
+
+.p-top-blog-card__body {
+  padding-top: 2rem;
+}
+.p-top-blog-card__body p {
+  font-weight: $font-bold;
+
+  font-size: 2rem;
+  line-height: calc(25 / 20);
+
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+.p-top-blog-card__body time {
+  display: block;
+  font-size: 1.8rem;
+  line-height: calc(32 / 18);
+  text-align: right;
+  margin-top: 1rem;
+}
+
+
+
+
+// クラス名を変更する
+.p-top-blog-card-lists {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: calc(106 / 880 * 100%);
+  row-gap: 6.1rem;
+}

@@ -8,28 +8,406 @@
   <meta name="description" content="きたむらミュージックスクールの公式サイトです">
   <!-- noindex -->
   <meta name="robots" content="noindex">
+  <!-- font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
   <!-- favicon -->
+
   <!-- css -->
   <link rel="stylesheet" href="./css/style.css">
+
 </head>
 
 <body>
   <div id="container">
-    <header class="header">
-      <h1>テストだよ</h1>
+
+    <!-- ヘッダー -->
+    <header class="p-header">
+      <div class="p-header__inner">
+        <h1 class="p-header__logo">
+          <a href="#">
+            <div class="p-header__image"><img src="./image/logo-red.svg" alt="きたむらミュージックスクールのロゴ"></div>
+            <p class="p-header__company">
+              <span>きたむら</span><br class="pc">ミュージックスクール
+            </p>
+          </a>
+        </h1>
+
+        <!-- SP用 -->
+        <div class="p-header__sp sp">
+          <button id="js-hamburger" class="p-header__hamburger c-hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+
+          <!-- SPドロワーメニュー -->
+          <div class="p-header__menu">
+            <nav>
+              <ul>
+                <li><a href="#price">料金</a></li>
+                <li><a href="#blog">ブログ</a></li>
+                <li><a href="#result">卒業実績</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+
+        <!-- PC用ヘッダーメニュー -->
+        <nav class="p-header__nav pc">
+          <ul>
+            <li class="p-header__nav-item"><a href="#price">料金</a></li>
+            <li class="p-header__nav-item"><a href="#blog">ブログ</a></li>
+            <li class="p-header__nav-item"><a href="#result">卒業実績</a></li>
+            <li class="p-header__nav-item p-header__nav-item--contact"><a href="#contact">お問い合わせ</a></li>
+          </ul>
+        </nav>
+
+      </div>
     </header>
 
     <main class="main">
-      <!-- mv -->
-      <div class="mv">
 
+      <!-- mv -->
+      <div class="p-top-mv">
+        <div class="p-top-mv__image">
+          <picture>
+            <source media="(min-width: 768px)" srcset="./image/mv-pc.jpg">
+            <img src="./image/mv-sp.jpg" alt="きたむらミュージックスクールのメインビュー">
+          </picture>
+        </div>
+
+        <div class="p-top-mv__contents">
+          <div class="p-top-mv__catch">
+            <h2>「音楽で生きる」<br class="sp">を叶える<br>ミュージックスクール</h2>
+          </div>
+        </div>
       </div>
 
       <!--  -->
-      <section id="#" class="">
+      <section class="p-top-dream">
+        <div class="p-top-dream__inner l-inner">
+          <!-- セクションタイトル -->
+          <div class="p-top-dream__title c-section-title c-section-title--red">
+            <h2>
+              全人類、<br class="sp">
+              ミュージシャン計画。
+            </h2>
+          </div>
+
+          <div class="p-top-dream__contents">
+
+          </div>
+          <div class="p-top-dream__text">
+            <p>
+              私たちは音楽を愛するすべての人が、音楽に熱狂できる世界を目指しています。
+            </p>
+          </div>
+
+          <!-- 流れ（ミュージシャン計画）赤い線 -->
+          <div class="p-top-dream__image">
+            <!-- 1つ目の項目 -->
+            <div class="p-top-dream__step p-top-flow-plan">
+              <p class="p-top-flow-plan__english">enthusiasm</p>
+              <div class="p-top-flow-plan__design c-flow">
+                <span class="p-top-flow-plan__span p-top-flow-plan__design--up-goal"></span>
+              </div>
+              <p class="p-top-flow-plan__japanese">熱狂し</p>
+            </div>
+
+            <!-- 2つ目の項目 -->
+            <div class="p-top-dream__step p-top-flow-plan">
+              <p class="p-top-flow-plan__english">envision</p>
+              <div class="p-top-flow-plan__design c-flow">
+                <span class="p-top-flow-plan__span"></span>
+              </div>
+              <p class="p-top-flow-plan__japanese">想像し</p>
+            </div>
+
+            <!-- 3つ目の項目 -->
+            <div class="p-top-dream__step p-top-flow-plan">
+              <p class="p-top-flow-plan__english">effulgent</p>
+              <div class="p-top-flow-plan__design c-flow">
+                <span class="p-top-flow-plan__span"></span>
+              </div>
+              <p class="p-top-flow-plan__japanese">輝く存在へ</p>
+            </div>
+          </div>
+
+
+          <!-- 流れ（ご利用の流れ）赤い線 -->
+          <div class="p-top-flow-use-wrap">
+            <!-- 1つ目の項目 -->
+            <div class="p-top-flow-use">
+              <div class="p-top-flow-use__design c-flow">
+                <span class="c-flow--down"></span>
+              </div>
+              <div class="p-top-flow-use__content">
+                <h3 class="p-top-flow-use__title">お問い合わせ</h3>
+                <p class="p-top-flow-use__text">
+                  まずはフォームまたはメールにてお問い合わせください。<br>
+                  ヒアリングの日程を調整します。
+                </p>
+              </div>
+            </div>
+
+            <!-- 2つ目の項目 -->
+            <div class="p-top-flow-use">
+              <div class="p-top-flow-use__design c-flow">
+                <span class="c-flow--down"></span>
+              </div>
+              <div class="p-top-flow-use__content">
+                <h3 class="p-top-flow-use__title">ヒアリング</h3>
+                <p class="p-top-flow-use__text">
+                  現在の技術面や将来の目標などをお伺いします。<br>
+                  悩みや不安な事もお気軽にご相談ください。
+                </p>
+              </div>
+            </div>
+            <!-- 3つ目の項目 -->
+            <div class="p-top-flow-use">
+              <div class="p-top-flow-use__design c-flow">
+                <span class="c-flow--down"></span>
+              </div>
+              <div class="p-top-flow-use__content">
+                <h3 class="p-top-flow-use__title">プランのご提案</h3>
+                <p class="p-top-flow-use__text">
+                  ライフスタイルや目標によって最適なプランをご提案します。<br>
+                  継続できるようサポートいたします。
+                </p>
+              </div>
+            </div>
+            <!-- ４つ目の項目 -->
+            <div class="p-top-flow-use">
+              <div class="p-top-flow-use__design  c-flow p-top-flow-use__design--down-goal">
+                <span class="c-flow--down"></span>
+              </div>
+              <div class="p-top-flow-use__content">
+                <h3 class="p-top-flow-use__title">ご入学</h3>
+                <p class="p-top-flow-use__text">
+                  お申し込み完了後、レッスンがスタートします。<br>
+                  マンツーマン指導なので、いつからでもスタートが可能です。
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 選ばれる理由 -->
+          <div class="p-top-reason">
+            <div class="p-top-reason__media">
+              <img src="./image/reason1-sp.jpg" alt="選ばれる理由1">
+            </div>
+            <div class="p-top-reason__content">
+              <h3>技術面はプロによるマンツーマン授業！</h3>
+              <p>第一線で活躍するプロによるマンツーマン授業で、きめ細かな技術指導が受けられます。</p>
+            </div>
+          </div>
+
+          <!-- 生徒の声カード群 -->
+          <ul class="p-top-voice-cards">
+            <!-- 生徒の声カード1 -->
+            <li class="p-top-voice-card">
+              <a href="#">
+                <div class="p-top-voice-card__media">
+                  <picture>
+                    <source media="(min-width: 768px)" srcset="./image/voice1-pc.jpg">
+                    <img src="./image/voice1-sp.jpg" alt="生徒の声１">
+                  </picture>
+                </div>
+                <div class="p-top-voice-card__body">
+                  <h3>証券会社勤務　丸山さん</h3>
+                  <p>昔やっていた音楽活動で、副収入が得られるようになったので、毎日充実するようになりました。</p>
+                </div>
+              </a>
+            </li>
+            <!-- 生徒の声カード2 -->
+            <li class="p-top-voice-card">
+              <a href="#">
+                <div class="p-top-voice-card__media">
+                  <picture>
+                    <source media="(min-width: 768px)" srcset="./image/voice1-pc.jpg">
+                    <img src="./image/voice1-sp.jpg" alt="生徒の声１">
+                  </picture>
+                </div>
+                <div class="p-top-voice-card__body">
+                  <h3>IT会社勤務　S.Eさん</h3>
+                  <p>プロの指導が受けられるので、技術が確実に上がるし、音楽への考え方とかも勉強できて最高です。</p>
+                </div>
+              </a>
+            </li>
+            <!-- 生徒の声カード3 -->
+            <li class="p-top-voice-card">
+              <a href="#">
+                <div class="p-top-voice-card__media">
+                  <picture>
+                    <source media="(min-width: 768px)" srcset="./image/voice1-pc.jpg">
+                    <img src="./image/voice1-sp.jpg" alt="生徒の声１">
+                  </picture>
+                </div>
+                <div class="p-top-voice-card__body">
+                  <h3>都内大学生　田森さん</h3>
+                  <p>就職する前にビジネスの事が学べるし、好きな音楽で稼げるようになったので選択肢が増えました。</p>
+                </div>
+              </a>
+            </li>
+
+          </ul>
+
+          <!-- ブログ群 -->
+          <ul>
+            <li class="p-top-blog-card">
+              <a class="" href="#">
+                <div class="p-top-blog-card__media c-label-image">
+                  <img src="./image/blog1-pc.jpg" alt="ブログ１">
+                  <span>ブログ群</span>
+                </div>
+                <div class="p-top-blog-card__body">
+                  <p>
+                    フォロワーではなくファンを増やせとは？
+                  </p>
+                  <time datetime="0000.00.00">0000.00.00</time>
+                </div>
+              </a>
+            </li>
+          </ul>
+  
+          <!-- FAQ群 -->
+          <!-- Q&A -->
+          <ul>
+            <!-- 1つ目 -->
+            <li>
+              <dl class="p-top-qa">
+                <!-- <dt class="p-top-qa__question"> -->
+                <dt class="p-top-qa__content p-top-qa-content">
+                  <p>どのような生徒さんがどれぐらいの期間で稼いでいますか？</p>
+                  <span class="p-top-qa-content__arrow c-qa-arrow active"></span>
+                </dt>
+                <!-- <dd class="p-top-qa__answer"> -->
+                <dd class="p-top-qa__content p-top-qa-content p-top-qa-content--answer active">
+                  <p>途中でプラン変更も可能です。毎月15日までに申請すれば翌月からプランが変更となります。</p>
+                </dd>
+              </dl>
+            </li>
+
+            <!-- 2つ目 -->
+            <li>
+              <dl class="p-top-qa">
+                <!-- <dt class="p-top-qa__question"> -->
+                <dt class="p-top-qa__content p-top-qa-content">
+                  <p>どのような生徒さんがどれぐらいの期間で稼いでいますか？</p>
+                  <span class="p-top-qa-content__arrow c-qa-arrow"></span>
+                </dt>
+                <!-- <dd class="p-top-qa__answer"> -->
+                <dd class="p-top-qa__content p-top-qa-content p-top-qa-content--answer">
+                  <p>途中でプラン変更も可能です。毎月15日までに申請すれば翌月からプランが変更となります。</p>
+                </dd>
+              </dl>
+            </li>
+          </ul>
+
+
+      <!-- セクション -->
+      <section class="p-top-dream">
+        <div class="p-top-dream__inner l-inner">
+          <!-- セクションタイトル -->
+          <div class="p-top-dream__title c-section-title c-section-title--red">
+            <h2>
+              全人類、<br class="sp">
+              ミュージシャン計画。
+            </h2>
+          </div>
+      
+          <div class="p-top-dream__contents">
+      
+          </div>
+          <div class="p-top-dream__text">
+            <p>
+              私たちは音楽を愛するすべての人が、音楽に熱狂できる世界を目指しています。
+            </p>
+          </div>
+        </div>
+      </section>
+
+          <!-- To Topボタン -->
+          <div class="c-to-top-arrow">
+            <span></span>
+          </div>
+
+
+        </div>
 
       </section>
 
+      <!-- 下層　実績一覧ページ -->
+      <section id="a" class="page-result-table">
+        <div class="l-inner">
+          <div class="p-result-card-lists">
+            <!-- 実績一覧カード1 -->
+            <li class="p-result-card">
+              <a class="" href="#">
+                <div class="p-result-card__media c-label-image">
+                  <img src="./image/result01-pc.jpg" alt="卒業実績１">
+                  <span>下層実績</span>
+                </div>
+                <div class="p-result-card__body">
+                  <p>
+                    タイトルが入ります。タイトルが入ります。タイトルが入ります。
+                  </p>
+                  <time datetime="0000.00.00">0000.00.00</time>
+                </div>
+              </a>
+
+            </li>
+            <!-- 実績一覧カード2 -->
+            <a class="p-result-card" href="#">
+              <div class="p-result-card__media c-label-image">
+                <img src="./image/result01-pc.jpg" alt="卒業実績１">
+                <span>ポップス</span>
+              </div>
+              <div class="p-result-card__body">
+                <p>
+                  タイトルが入ります。タイトルが入ります。タイトルが入ります。
+                </p>
+                <time datetime="0000.00.00">0000.00.00</time>
+              </div>
+            </a>
+            <!-- 実績一覧カード3 -->
+            <a class="p-result-card" href="#">
+              <div class="p-result-card__media c-label-image">
+                <img src="./image/result01-pc.jpg" alt="卒業実績１">
+                <span>ポップス</span>
+              </div>
+              <div class="p-result-card__body">
+                <p>
+                  タイトルが入ります。タイトルが入ります。タイトルが入ります。
+                </p>
+                <time datetime="0000.00.00">0000.00.00</time>
+              </div>
+            </a>
+            <!-- 実績一覧カード４ -->
+            <a class="p-result-card" href="#">
+              <div class="p-result-card__media c-label-image">
+                <img src="./image/result01-pc.jpg" alt="卒業実績１">
+                <span>ポップス</span>
+              </div>
+              <div class="p-result-card__body">
+                <p>
+                  タイトルが入ります。タイトルが入ります。タイトルが入ります。
+                </p>
+                <time datetime="0000.00.00">0000.00.00</time>
+              </div>
+            </a>
+            
+          </div>
+
+        </div>
+      </section>
+      
+      <!-- ボタン -->
+      <div class="c-button">
+        <a href="#">お問い合わせ</a>
+      </div>
 
     </main>
 

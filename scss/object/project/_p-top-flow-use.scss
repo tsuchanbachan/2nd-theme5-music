@@ -1,0 +1,122 @@
+@use "../../global" as *;
+@use "sass:math";
+
+// これは場所が違う！
+.p-top-flow-use-wrap {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+
+.p-top-flow-use {
+  display: flex;
+  column-gap: 2rem;
+
+  align-items: stretch;
+
+  // align-items: center;
+  // justify-content: center;
+
+  @include mq(md) {
+    column-gap: 4.9rem;
+  }
+}
+
+.p-top-flow-use:not(:first-of-type) {
+  padding-top: 3.6rem;
+
+  @include mq(md) {
+    padding-top: 5.8rem;
+  }
+}
+
+.p-top-flow-use__design {
+  width: 2rem;
+  flex-shrink: 0;
+  position: relative;
+}
+
+// 下向きの縦線（利用の流れ）
+.p-top-flow-use__design:before {
+  content: '';
+  display: block;
+  width: 0.3rem;
+  background-color: $color-red;
+  position: absolute;
+  // bottom: 0;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+// ゴール以外の縦線（「利用の流れ」）
+.p-top-flow-use:not(:last-of-type) .p-top-flow-use__design::before {
+  height: calc(100% + 3.6rem);
+
+  @include mq(md) {
+    height: calc(100% + 5.8rem);
+  }
+}
+
+// ゴールの縦線（「利用の流れ」）
+.p-top-flow-use:last-of-type .p-top-flow-use__design:before {
+  height: 100%;
+}
+
+// 矢印部分（利用の流れ）
+.p-top-flow-use__design--down-goal:after {
+  content: '';
+  width: 2rem;
+  height: 2rem;
+  border-bottom: 0.3rem solid $color-red;
+  border-right: 0.3rem solid $color-red;
+  // display: block;
+
+  position: absolute;
+  // top: calc(15rem);
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+
+  @include mq(md) {
+    top: calc(3.4rem);
+  }
+}
+
+
+
+.p-top-flow-use__content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.9rem;
+
+  @include mq(md) {
+    flex-direction: row;
+  }
+}
+
+.p-top-flow-use__title {
+  font-size: 2.2rem;
+  line-height: calc(33 / 22);
+  font-weight: $font-bold;
+  color: $color-red;
+
+  @include mq(md) {
+    font-size: 2.2rem;
+    width: calc(15.4rem + 3.9rem);
+  }
+}
+
+.p-top-flow-use__text {
+  font-size: 1.6rem;
+  line-height: calc(30 / 16);
+  color: $color-main;
+
+  @include mq(md) {
+    font-size: 1.8rem;
+    line-height: calc(30 / 18);
+    flex: 1;
+  }
+}
+

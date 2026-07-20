@@ -1,12 +1,45 @@
-/* 色 */
-$color-main: #000000;
-$color-green: #4D9600;
-$color-white: #fff;
-$color-back-green: rgb(77 150 0 / .15);
-/* font */
-$font-medium: 500;
-$font-demibold: 600;
-/* ヘッダー高さ */
-$header-height: 80px;
-$header-height-sp: 50px;
+@use "sass:math";
 
+// 色
+$color-main: #000000;
+$color-red: #CB0000;
+$color-white: #fff;
+$color-border: #707070;
+
+// font
+$font-medium: 500;
+$font-bold: 700;
+
+// ヘッダー高さ
+$header-height-sp: 50px;
+$header-height-pc: 80px;
+
+// vw関数（使い方：vw(80)
+// @function vw($pixelSize, $baseWidth: 1080) {
+//   @return calc($pixelSize / $baseWidth * 100vw);
+// }
+// @function hvw($pixelSize) {
+//   @return min(calc($pixelSize / 1080 * 100vw), $pixelSize * 1px);
+// }
+
+
+// vw関数（使い方：vw(80)
+@function vw($pixelSize, $baseWidth: 1080) {
+  @if math.unit($pixelSize) == "px"  {
+    $pixelSize: math.div($pixelSize, 1px);
+  }
+  @return calc(#{$pixelSize} / #{$baseWidth} * 100vw);
+}
+
+// どちらか小さい方を採用（使い方：hvw(80)）
+// 「@function hvw(80)」 と入れると、
+// 「min(calc(80 / 1080 * 100vw), 80px)」という意味
+@function hvw($pixelSize) {
+  @if math.unit($pixelSize)== "px"  {
+    $pixelSize: math.div($pixelSize, 1px);
+  }
+  @return min(
+    calc(#{$pixelSize} / 1080 * 100vw),
+    #{$pixelSize * 1px}
+  );
+}

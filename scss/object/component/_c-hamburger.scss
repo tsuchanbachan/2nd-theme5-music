@@ -1,0 +1,56 @@
+@use "../../global" as *;
+@use "sass:math";
+
+// ハンバーガーメニュー
+.c-hamburger {
+  position: relative;
+  display: block;
+  background: $color-red;
+  width: 71px;
+  height: 50px;
+  cursor: pointer;
+}
+
+// 三本線
+.c-hamburger span {
+  position: absolute;
+  display: block;
+  // top: 50%;
+  // top: 42%;
+  left: 50%;
+  // transform: translate(-50%, -50%);
+  transform: translateX(-50%);
+  width: 32px;
+  height: 4px;
+  background: $color-white;
+  transition: .4s;
+  border-radius: 2px;
+}
+
+.c-hamburger span:nth-of-type(1) {
+  // 線の上端までの距離
+  top: calc(11 / 50 * 100%);
+}
+
+.c-hamburger span:nth-of-type(2) {
+  top: calc(23 / 50 * 100%);
+}
+
+.c-hamburger span:nth-of-type(3) {
+  top: calc(35 / 50 * 100%);
+}
+
+// メニューが開いた時の三本線
+.c-hamburger.is-active span:nth-of-type(1) {
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.c-hamburger.is-active span:nth-of-type(2) {
+  opacity: 0;
+}
+
+.c-hamburger.is-active span:nth-of-type(3) {
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+}

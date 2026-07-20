@@ -1,0 +1,29 @@
+@use "../../global" as *;
+@use "sass:math";
+
+// ラベル付きの画像
+.c-label-image {
+  position: relative;
+  width: 100%;
+
+}
+
+.c-label-image img {
+  object-fit: cover;
+  
+  aspect-ratio: 387 / 273;
+}
+
+.c-label-image span {
+  position: absolute;
+  background-color: $color-red;
+  color: $color-white;
+  top: 0;
+  left: 0;
+  font-weight: $font-bold;
+  text-align: center;
+
+  width: 10rem;
+  font-size: 1.5rem;
+  line-height: calc(30 / 15);
+}

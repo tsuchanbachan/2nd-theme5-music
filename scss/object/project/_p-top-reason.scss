@@ -1,0 +1,72 @@
+@use "../../global" as *;
+@use "sass:math";
+
+// トップ：選ばれる理由
+.p-top-reason {
+  display: flex;
+  flex-direction: column;
+
+  @include mq(md) {
+    flex-direction: row;
+  }
+}
+
+.p-top-reason__media {
+  width: 100%;
+
+  @include mq(md) {
+    width: calc(350 / 880 * 100%);
+  }
+}
+
+.p-top-reason__media img {
+  aspect-ratio: 335 / 200;
+  object-fit: cover;
+}
+
+.p-top-reason__content {
+  width: 100%;
+  margin-top: 3rem;
+
+  @include mq(md) {
+    margin-top: 0;
+    flex: 1;
+  }
+}
+
+.p-top-reason__content h3 {
+  font-size: 2rem;
+  line-height: calc(30 / 20);
+  font-weight: $font-bold;
+  padding-bottom: 1rem;
+  position: relative;
+  
+  @include mq(md) {
+    padding-left: calc(50 / 880 * 100%);
+  }
+}
+
+.p-top-reason__content h3::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 0.2rem;
+  background-color: $color-red;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+
+  @include mq(md) {
+    border-radius: 0.1rem;
+  }
+}
+
+.p-top-reason__content p {
+  font-size: 1.6rem;
+  line-height: calc(30 / 16);
+  margin-top: 1.7rem;
+
+  @include mq(md) {
+    padding-left: calc(50 / 880 * 100%);
+  }
+}

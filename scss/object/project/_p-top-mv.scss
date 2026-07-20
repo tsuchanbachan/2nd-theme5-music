@@ -1,0 +1,65 @@
+@use "../../global" as *;
+@use "sass:math";
+
+// MV
+.p-top-mv {
+  position: relative;
+  padding-top: $header-height-sp;
+
+  @include mq(md) {
+    padding-top: hvw($header-height-pc);
+  }
+}
+
+.p-top-mv__image {
+  width: 100%;
+  position: relative;
+}
+
+.p-top-mv__image::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(80, 80, 80, 0.502);
+  z-index: 10;
+}
+
+.p-top-mv__image img {
+  aspect-ratio: 375 / 550;
+  object-fit: cover;
+  
+  @include mq(md) {
+    aspect-ratio: 1080 / 470;
+  }
+}
+
+.p-top-mv__contents {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 20;
+}
+
+.p-top-mv__catch {
+  text-align: center;
+  // padding-top: 21px;
+  // padding-left: 13px;
+}
+
+.p-top-mv__catch h2 {
+  color: $color-white;
+  font-weight: $font-bold;
+  font-size: 3rem;
+  line-height: calc(50 / 30);
+
+  @include mq(md) {
+    // font-size: 4rem;
+    font-size: hvw(40);
+    line-height: calc(60 / 40);
+  }
+}

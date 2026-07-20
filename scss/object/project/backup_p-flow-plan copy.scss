@@ -1,0 +1,157 @@
+@use "../../global" as *;
+@use "sass:math";
+
+.p-flow-plan-wrap {
+margin-top: 50px;
+}
+
+.p-flow-plan {
+  display: flex;
+  align-items: center;
+
+  // justify-content: center;
+
+}
+
+.p-flow-plan__english {
+  font-size: 2rem;
+  line-height: 5rem;
+  font-weight: $font-bold;
+  color: $color-red;
+  padding-right: 3rem;
+  width: calc(11.5rem + 3rem);
+  text-align: right;
+  text-transform: capitalize;
+  word-break: keep-all;
+
+  @include mq(md) {
+    font-size: 2.5rem;
+    width: calc(14.5rem + 3rem);
+  }
+}
+
+.p-flow-plan__design {
+  
+}
+
+.p-flow-plan__japanese {
+  font-size: 2rem;
+  line-height: 5rem;
+  color: $color-main;
+  padding-left: 3rem;
+
+  @include mq(md) {
+    font-size: 2.3rem;
+  }
+}
+
+.p-flow-plan:not(:first-of-type) {
+  padding-top: 1.7rem;
+}
+
+
+
+// 基本の「○」（共通）
+.c-flow {
+  display: block;
+  width: 2rem;
+  height: 2rem;
+  background-color: $color-red;
+  border-radius: 50%;
+  position: relative;
+}
+
+// 上向きの縦線（ミュージシャン計画）
+// ーーーーーー
+.c-flow:before {
+  content: '';
+  display: block;
+  width: 0.3rem;
+  background-color: $color-red;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  // height: calc(5rem + 2rem);
+}
+// ゴールの縦線（「計画」）
+.p-flow-plan:first-of-type .c-flow:before {
+  height: calc(2.8rem + 2rem);
+}
+// ゴール以外の縦線（「計画」）
+.p-flow-plan:not(:first-of-type) .c-flow:before {
+  height: calc(5rem + 2rem);
+}
+
+// 矢印部分（ミュージック計画用）
+.c-flow--goal:after {
+  content: '';
+  width: 2rem;
+  height: 2rem;
+  border-top: 0.3rem solid $color-red;
+  border-left: 0.3rem solid $color-red;
+
+  position: absolute;
+  top: -3rem;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+}
+
+// 下向きの線（利用の流れ）
+// -----
+.c-flow--down:before {
+  // height: calc(17.8rem + 2rem);
+  top: 0;
+  bottom: auto;
+}
+// ゴールの縦線（「利用の流れ」）
+.p-flow-use:last-of-type .c-flow--down:before {
+  // height: calc(15rem);
+  height: calc(100%);
+
+  @include mq(md) {
+    // height: calc(3.4rem + 2rem);
+    height: calc(100%);
+  }
+}
+.p-flow-use {
+  position: relative;
+}
+// ゴール以外の縦線（「利用の流れ」）
+.p-flow-use:not(:last-of-type) .p-flow-use__design:before {
+  position: absolute;
+  // height: calc(14.8rem + 2rem);
+  height: calc(100% + 2rem);
+
+  @include mq(md) {
+    height: calc(100% + 5.8rem);
+  }
+}
+// .p-flow-use:not(:last-of-type) .c-flow--down:before {
+//   // height: calc(14.8rem + 2rem);
+//   height: calc(100% + 2rem);
+
+//   @include mq(md) {
+//     height: calc(100% + 5.8rem);
+//   }
+// }
+
+// 矢印部分
+.c-flow--down-goal:after {
+  content: '';
+  width: 2rem;
+  height: 2rem;
+  border-bottom: 0.3rem solid $color-red;
+  border-right: 0.3rem solid $color-red;
+  // display: block;
+
+  position: absolute;
+  top: calc(15rem);
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+
+  @include mq(md) {
+    top: calc(3.4rem);    
+  }
+}
+

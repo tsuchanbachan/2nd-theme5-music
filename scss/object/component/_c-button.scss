@@ -1,0 +1,33 @@
+@use "../../global" as *;
+@use "sass:math";
+
+// お問い合わせボタン
+.c-button {
+  width: 100%;
+  padding-inline: 2rem;
+
+  @include mq(md) {
+    width: calc(300 / 1080 * 100vw);
+    padding-inline: 0;
+  }
+}
+
+.c-button a {
+  font-size: 2rem;
+  line-height: calc(60 / 20);
+  font-weight: $font-bold;
+  background-color: $color-red;
+  color: $color-white;
+  display: block;
+  text-align: center;
+  border: solid 0.1rem $color-border;
+
+  transition: background-color 0.4s, color 0.4s;
+
+  @media (any-hover: hover) {
+    &:hover {
+      background-color: $color-white;
+      color: $color-red;
+    }
+  }
+}

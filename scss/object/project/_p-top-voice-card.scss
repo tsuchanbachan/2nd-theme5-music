@@ -1,0 +1,46 @@
+@use "../../global" as *;
+@use "sass:math";
+
+.p-top-voice-card {
+  width: 100%;
+  width: 100%;    
+  
+  @include mq(md) {
+    width: calc(270 / 880 * 100%);
+  }
+}
+
+.p-top-voice-card__media {}
+
+.p-top-voice-card__media img {
+  aspect-ratio: 270 / 190;
+  object-fit: cover;
+}
+
+.p-top-voice-card__body {
+  background-color: $color-red;
+  padding-top: 2.7rem;
+
+  @include mq(md) {
+    padding-top: 1.7rem;
+  }
+}
+.p-top-voice-card__body h3 {
+  font-size: 2.2rem;
+  line-height: calc(33 / 22);
+  font-weight: $font-bold;
+  color: $color-white;
+  text-align: center;
+}
+
+.p-top-voice-card__body p {
+  font-size: 1.8rem;
+  line-height: calc(30 / 18);
+  margin-top: 1rem;
+  color: $color-white;
+
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}

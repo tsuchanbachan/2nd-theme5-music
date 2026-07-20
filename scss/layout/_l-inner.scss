@@ -1,0 +1,14 @@
+@use "sass:map";
+@use '../global' as *;
+
+.l-inner {
+  // max-width: 920px;
+  // max-width: 980px;
+  max-width: 940px;
+  padding-inline: 20px;
+  margin-inline: auto;
+  
+  @include mq(md) {
+    padding-inline: 30px;
+  }
+}

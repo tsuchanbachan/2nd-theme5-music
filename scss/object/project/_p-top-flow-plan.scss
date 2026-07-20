@@ -1,0 +1,100 @@
+@use "../../global" as *;
+@use "sass:math";
+
+.p-top-flow-plan {
+  display: flex;
+  // align-items: stretch;
+  align-items: flex-end;
+  // align-items: baseline;
+
+  // position: relative;
+  // align-items: center;
+}
+
+.p-top-flow-plan:not(:first-of-type) {
+  padding-top: calc(1.5rem + 1.7rem + 1.5rem);
+}
+
+.p-top-flow-plan__english {
+  font-size: 2rem;
+  // line-height: 5rem;
+  line-height: 1;
+  font-weight: $font-bold;
+  color: $color-red;
+  padding-right: 3rem;
+  width: calc(11.5rem + 3rem);
+  text-align: right;
+  text-transform: capitalize;
+  word-break: keep-all;
+
+  @include mq(md) {
+    font-size: 2.5rem;
+    width: calc(14.5rem + 3rem);
+  }
+}
+
+.p-top-flow-plan__design {
+  flex-shrink: 0;
+  width: 2rem;
+  position: relative;
+}
+
+.p-top-flow-plan__japanese {
+  font-size: 2rem;
+  // line-height: 5rem;
+  line-height: 1;
+  color: $color-main;
+  padding-left: 3rem;
+
+  @include mq(md) {
+    font-size: 2.3rem;
+  }
+}
+
+// 上向きの縦線（ミュージシャン計画）
+// ーーーーーー
+.p-top-flow-plan__design:before {
+  content: '';
+  display: block;
+  width: 0.3rem;
+  background-color: $color-red;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  // height: calc(5rem + 2rem);
+}
+
+// ゴールの縦線（「計画」）
+.p-top-flow-plan:first-of-type .p-top-flow-plan__design::before {
+  height: calc(100% + 2.8rem + 1.5rem);
+
+  @include mq(md) {
+    height: calc(3.9rem + 2rem);
+  }
+}
+
+// ゴール以外の縦線（「計画」）
+.p-top-flow-plan:not(:first-of-type) .p-top-flow-plan__design::before {
+  height: calc(100% + 1.5rem + 1.7rem + 1.5rem);
+}
+
+// 矢印部分（ミュージック計画用）
+.p-top-flow-plan__design--up-goal::after {
+  content: '';
+  width: 2.235rem;
+  height: 2.235rem;
+  border-top: 0.3rem solid $color-red;
+  border-left: 0.3rem solid $color-red;
+
+  position: absolute;
+  // 「ゴールの縦線」のheightから自分の高さを差し引いたもの
+  top: -3.9rem;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  
+  @include mq(md) {
+    top: -3.9rem;
+    
+  }
+}

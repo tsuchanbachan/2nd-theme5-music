@@ -1,0 +1,40 @@
+@use "../../global" as *;
+@use "sass:math";
+
+// パンくずリスト
+.c-bread {
+  width: 100%;
+  background-color: #e8e8e8;
+}
+
+.c-bread ol {
+  padding-inline: 20px;
+  padding-block: 5px 6px;
+  margin-inline: auto;
+  max-width: 940px;
+
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 2rem;
+
+  @include mq(md) {
+    padding-inline: 30px;
+  }
+}
+
+.c-bread ol li {
+  display: flex;
+  // align-items: center;
+}
+
+.c-bread ol li:not(:last-of-type)::after {
+  content: '>';
+  margin-left: 1.8rem;
+  font-size: 1.6rem;
+  line-height: calc(33 / 16);
+}
+
+.c-bread a {
+  font-size: 1.6rem;
+  line-height: calc(33 / 16);
+}

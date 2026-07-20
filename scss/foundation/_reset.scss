@@ -38,7 +38,9 @@ button {
 ol,
 ul,
 menu,
-summary {
+summary,
+// liを追記
+li {
   list-style: none;
 }
 

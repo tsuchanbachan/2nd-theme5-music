@@ -9,19 +9,27 @@ html {
   -webkit-text-size-adjust: 100%;
   word-break: break-all;
   scroll-behavior: smooth;
-  font-size: 10px;
+
+  font-size: calc(10 / 375 * 100vw);
+  @media (min-width: 375px) {
+    font-size: 10px;
+  }
+  @media (min-width: 768px) {
+    font-size: calc(10 / 940 * 100vw);
+  }
+  @media (min-width: 940px) {
+    font-size: 10px;
+  }
 }
 
 body {
-  font-family: "Yu Mincho", "YuMincho", serif;
+  font-family: "Yu Gothic", "YuGothic", "Noto Sans JP", sans-serif;
   font-optical-sizing: auto;
   font-weight: $font-medium;
   color: $color-main;
-  font-size: 1.6rem;
-  line-height: calc(25 / 16);
+  font-size: 1.8rem;
+  line-height: calc(30 / 18);
   letter-spacing: 0;
-
-  color: red;
 }
 
 body.is-fixed {
@@ -45,11 +53,11 @@ img {
 }
 
 section {
-  padding-inline: 30px;
-  scroll-margin-top: $header-height;
+  // padding-inline: 30px;
+  scroll-margin-top: $header-height-sp;
 
-  @include mq(sp) {
-    scroll-margin-top: $header-height-sp;
+  @include mq(md) {
+    scroll-margin-top: $header-height-pc;
   }
 }
 

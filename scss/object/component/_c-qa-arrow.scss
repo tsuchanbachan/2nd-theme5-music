@@ -1,0 +1,39 @@
+@use "../../global" as *;
+@use "sass:math";
+
+// FAQの矢印
+
+.c-qa-arrow {
+  display: block;
+  width: 13.62px;
+  height: 9.24px;
+  position: relative;
+}
+
+.c-qa-arrow.active {
+  transform: rotate(180deg);
+}
+
+.c-qa-arrow::before,
+.c-qa-arrow::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 11.48px;
+  height: 1px;
+  background-color: $color-main;
+}
+
+// 横方向の線の内側の端が支点になり、中央の先端で自然につながる
+.c-qa-arrow::before {
+  // 左右線の重なりを考慮
+  right: calc(50% - 0.2px);
+  transform-origin: right center;
+  transform: rotate(53.6deg);
+}
+
+.c-qa-arrow::after {
+  left: calc(50% - 0.2px);
+  transform-origin: left center;
+  transform: rotate(-53.6deg);
+}

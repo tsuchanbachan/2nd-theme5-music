@@ -1,0 +1,48 @@
+@use "../../global" as *;
+@use "sass:math";
+
+// To Topボタン
+
+.c-to-top-arrow {
+  width: 68px;
+  height: 68px;
+  background-color: rgb(0 0 0 / 50.2%);
+  border-radius: 50%;
+  display: flex;
+  // align-items: center;
+  justify-content: center;
+  // 要・調整
+  padding-top: 25px;
+}
+
+.c-to-top-arrow span {
+  display: block;
+  width: 23.15px;
+  height: 15.7px;
+  position: relative;
+}
+
+.c-to-top-arrow span::before,
+.c-to-top-arrow span::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 19.505656px;
+  height: 5px;
+  background-color: $color-white;
+  border-radius: 2.5px;
+}
+
+// 横方向の線の内側の端が支点になり、中央の先端で自然につながる
+.c-to-top-arrow span::before {
+  // 左右線の重なりを考慮
+  right: calc(50% - 0.5px);
+  transform-origin: right center;
+  transform: rotate(-53.6deg);
+}
+
+.c-to-top-arrow span::after {
+  left: calc(50% - 0.5px);
+  transform-origin: left center;
+  transform: rotate(53.6deg);
+}

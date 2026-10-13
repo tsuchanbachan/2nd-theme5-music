@@ -1,0 +1,44 @@
+@use "../../global" as *;
+@use "sass:math";
+
+.p-top-voice {
+  background-color: $color-red;
+  padding-block: 4.6rem 5rem;
+
+  @include mq(md) {
+    padding-block: 4.4rem 8rem;
+  }
+}
+
+.p-top-voice__inner {
+  // max-width: 940px;
+  padding-inline: 20px;
+  margin-inline: auto;
+
+  // 880px＋padding-inline
+  max-width: 1018px;
+
+  @include mq(md) {
+    // padding-inline: 30px;
+    // 通常padding30と矢印＋矢印との余白で39
+    padding-inline: 69px;
+  }
+}
+
+.p-top-voice__contents {
+  margin-top: 3.9rem;
+  position: relative;
+
+  @include mq(md) {
+    margin-top: 3.6rem;
+  }
+}
+
+.p-top-voice__cards {
+  @include mq(md) {
+    // sweiper側で設定
+    // display: flex;
+    // column-gap: calc(35 / 880 * 100%);
+    // flex-wrap: wrap;
+  }
+}

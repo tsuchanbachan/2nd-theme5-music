@@ -10,10 +10,60 @@
 
 .c-label-image img {
   object-fit: cover;
-  
-  aspect-ratio: 387 / 273;
 }
 
+// archive-blog（ブログ一覧）ページの写真
+.c-label-image--archive-blog img {
+  aspect-ratio: 335 / 200;
+  
+  @include mq(md) {
+    aspect-ratio: 260 / 184;
+  }
+}
+// blog-detail（ブログ詳細）ページ〜アイキャッチ〜写真
+.c-label-image--blog-detail img{
+  aspect-ratio: 335 / 200;
+
+  @include mq(md) {
+    aspect-ratio: 600 / 350;
+  }
+}
+// blog-detail（ブログ詳細）ページ〜関連記事〜写真
+.c-label-image--blog-connection img{
+  aspect-ratio: 160 / 110;
+  
+  @include mq(md) {
+    aspect-ratio: 200 / 140;
+  }
+}
+// archive-result（実績一覧）ページの写真
+.c-label-image--archive-result img {
+  
+  @include mq(md) {
+    aspect-ratio: 387 / 273;
+    // aspect-ratio: 260 / 184;
+  }
+}
+// archive-detail（実績詳細）ページ〜アイキャッチ〜写真
+.c-label-image--result-detail img {
+  aspect-ratio: 335 / 236;
+
+  @include mq(md) {
+    aspect-ratio: 880 / 400;
+  }
+}
+// result-detail（実績詳細）ページ〜関連記事〜写真
+.c-label-image--result-connection img {
+  aspect-ratio: 160 / 113;
+  
+  @include mq(md) {
+    aspect-ratio: 260 / 183;
+  }
+}
+
+// -------------------------------
+// 左上のラベル
+// -------------------------------
 .c-label-image span {
   position: absolute;
   background-color: $color-red;
@@ -23,7 +73,67 @@
   font-weight: $font-bold;
   text-align: center;
 
+}
+// アーカイブブログページ
+.c-label-image--archive-blog span {
+  // width: 10rem;
+  width: 9rem;
+  font-size: 1.5rem;
+  line-height: calc(30 / 15);
+  
+  @include mq(md) {
+    width: 8rem;
+    // line-height: calc(25 / 15);
+  }
+}
+// ブログ詳細ページ〜アイキャッチ〜
+.c-label-image--blog-detail span {
+  font-size: 1.5rem;
+  line-height: calc(25 / 15);
+  width: 9rem;
+  height: 3rem;
+  padding-block: .4rem .1rem;
+
+  @include mq(md) {
+    width: 8rem;
+    padding-block: .3rem .2rem;
+    
+  }
+}
+// ブログ詳細ページ〜関連記事〜
+.c-label-image--blog-connection span {
+  width: 8rem;
+  font-size: 1.5rem;
+  line-height: calc(30 / 15);
+}
+// アーカイブ実績一覧ページ
+.c-label-image--archive-result span {
   width: 10rem;
   font-size: 1.5rem;
   line-height: calc(30 / 15);
+
+  @include mq(md) {
+
+  }
+}
+// 実績詳細ページ
+.c-label-image--result-detail span {
+  width: 10rem;
+  font-size: 1.5rem;
+  line-height: calc(30 / 15);
+
+  @include mq(md) {
+    
+  }
+}
+// 実績詳細ページ〜関連記事〜写真
+.c-label-image--result-connection span {
+  width: 8rem;
+  font-size: 1.5rem;
+  line-height: calc(30 / 15);
+
+  @include mq(md) {
+    width: 10rem;
+    line-height: calc(25 / 15);
+  }
 }

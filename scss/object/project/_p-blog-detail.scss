@@ -1,0 +1,47 @@
+@use "sass:map";
+@use '../../global' as *;
+
+.p-blog-detail {}
+
+.p-blog-detail__fv {}
+
+.p-blog-detail__bread {}
+
+.p-blog-detail__column {
+  margin-top: 5rem;
+
+  @include mq(md) {
+    display: flex;
+    column-gap: calc(30 / 880 * 100%);
+
+    margin-top: 7rem;
+    
+  }
+}
+
+.p-blog-detail__column-contents {
+  @include mq(md) {
+    // width: calc(600 / 880 * 100%);
+    flex: 1;
+  }
+}
+
+// セクション
+.p-blog-detail__article {
+  margin-bottom: 6.3rem;
+
+  @include mq(md) {
+    margin-bottom: 9.3rem;
+  }
+}
+
+.p-blog-detail__column-side {
+  margin-top: 3.01rem;
+
+  @include mq(md) {
+    width: calc(250 / 880 * 100%);
+    margin-top: 0;
+  }
+}
+
+

@@ -1,0 +1,88 @@
+@use "../../global" as *;
+@use "sass:math";
+
+// .p-blog-detail-article__sns-icon {
+.p-sns {
+  width: calc(105 / 471 * 100%);
+  display: block;
+  height: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include mq(md) {
+    color: $color-white;
+    font-size: 1rem;
+    line-height: calc(33 / 10);
+    font-weight: $font-bold;
+
+    // gap？左右padding？どっちつかず
+    column-gap: .8rem;
+  }
+}
+
+.p-sns img {
+  display: block;
+  height: auto;
+  // margin-inline: auto;
+}
+
+.p-sns--fb {
+  background: #425893;
+
+  @include mq(md) {
+    width: 10.5rem;
+  }
+}
+
+.p-sns--fb img {
+  width: 1.118rem;
+}
+
+.p-sns--twitter {
+  background: #4A9FEB;
+
+  @include mq(md) {
+    width: 8.8rem;
+  }
+}
+
+.p-sns--twitter img {
+  width: 2.099rem;
+}
+
+.p-sns--hatena {
+  background: #4EACD5;
+
+  @include mq(md) {
+    width: 9.3rem;
+  }
+}
+
+.p-sns--hatena img {
+  width: 1.688rem;
+}
+
+.p-sns--line {
+  background: #52B534;
+
+  @include mq(md) {
+    width: 8.1rem;
+  }
+}
+
+.p-sns--line img {
+  width: 2.031rem;
+}
+
+.p-sns--pocket {
+  background: #DC4F5A;
+
+  @include mq(md) {
+    width: 9.1rem;
+  }
+}
+
+.p-sns--pocket img {
+  width: 2.159rem;
+}

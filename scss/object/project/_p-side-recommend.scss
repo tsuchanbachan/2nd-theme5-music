@@ -1,0 +1,60 @@
+@use "../../global" as *;
+@use "sass:math";
+
+.p-side-recommend {
+  margin-top: 2.061rem;
+
+  @include mq(md) {
+    margin-top: 1.5rem;
+  }
+}
+
+.p-side-recommend ul {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2.046rem;
+
+  @include mq(md) {
+    row-gap: 1.5rem;
+  }
+}
+
+.p-side-recommend a {
+  display: flex;
+  column-gap: calc(20 / 335 * 100%);
+
+  @include mq(md) {
+    column-gap: calc(15 / 250 * 100%);
+  }
+}
+
+.p-side-recommend__image {
+  width: calc(160 / 335 * 100%);
+
+  @include mq(md) {
+    width: calc(95 / 250 * 100%);
+  }
+}
+
+.p-side-recommend__image img {
+  aspect-ratio: 160 / 110;
+  object-fit: cover;
+
+  @include mq(md) {
+    aspect-ratio: 95 / 75;
+  }
+}
+
+.p-side-recommend__text {
+  flex: 1;
+}
+
+.p-side-recommend__text p {
+  font-size: 1.7rem;
+  line-height: calc(28 / 17);
+  margin-top: 0.854rem;
+
+  @include mq(md) {
+    margin-top: 0;
+  }
+}

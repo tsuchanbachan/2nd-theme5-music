@@ -4,6 +4,7 @@
 .c-pagination {
   display: flex;
   column-gap: .5rem;
+  justify-content: center;
 
   @include mq(md) {
     column-gap: 1rem;

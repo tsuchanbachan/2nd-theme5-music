@@ -1,0 +1,245 @@
+@use "sass:map";
+@use '../../global' as *;
+
+.p-blog-detail-article {
+
+}
+
+.p-blog-detail-article__head-image img {
+
+}
+
+.p-blog-detail-article__head-title {
+  margin-top: 3rem;
+
+  @include mq(md) {
+    margin-top: 4.6rem;
+  }
+}
+
+.p-blog-detail-article__head-title h1 {
+  font-size: 2rem;
+  line-height: calc(30 / 20);
+  font-weight: $font-bold;
+  color: $color-main;
+
+  @include mq(md) {
+    font-size: 2.5rem;
+    line-height: calc(40 / 25);
+  }
+}
+
+.p-blog-detail-article__head time {
+  font-size: 1.7rem;
+  line-height: calc(30 / 17);
+  display: block;
+  margin-top: 0.6rem;
+
+  @include mq(md) {
+    margin-top: 0.5rem;
+  }
+}
+
+.p-blog-detail-article__head-sns {
+  display: flex;
+  flex-wrap: no-wrap;
+  column-gap: calc(3 / 335 * 100%);
+  margin-top: 2.1rem;
+  
+  @include mq(md) {
+    max-width: 47.1rem;
+    width: 100%;
+    column-gap: calc(3 / 401 * 100%);
+  }
+
+}
+
+.p-blog-detail-article__contents {
+  margin-top: 2.7rem;
+
+  @include mq(md) {
+    margin-top: 4.8rem;
+  }
+}
+
+.p-blog-detail-article__contents h2 {
+  font-size: 2rem;
+  line-height: calc(30 / 20);
+  font-weight: $font-bold;
+  margin-top: 3.9rem;
+}
+
+.p-blog-detail-article__contents-text {
+  font-size: 1.6rem;
+  line-height: calc(30 / 16);
+  margin-top: 1.7rem;
+
+  @include mq(md) {
+    font-size: 1.8rem;
+    line-height: calc(30 / 18);
+  }
+}
+
+// spは表示、pcは少ない
+.p-blog-detail-article__contents-span-sp {
+  display: inline;
+  @include mq(md) {
+    display: none;
+  }
+}
+// spは少ない、pcは表示
+// .p-blog-detail-article__contents-span-pc {
+//   display: none;
+//   @include mq(md) {
+//     display: inline;
+//   }
+// }
+
+.p-blog-detail-article__contents-image {
+  margin-top: 3.9rem;
+
+  @include mq(md) {
+    // margin-top: 1.7rem;
+    margin-top: 1.9rem;
+    width: 33.5rem;
+  }
+}
+
+.p-blog-detail-article__contents-image img {
+  aspect-ratio: 335 / 200;
+  object-fit: cover;
+}
+
+.p-blog-detail-article__contents ul {
+  margin-top: 2.7rem;
+}
+
+.p-blog-detail-article__contents li {
+  font-size: 1.6rem;
+  line-height: calc(30 / 16);
+
+  @include mq(md) {
+    font-size: 1.8rem;
+    line-height: calc(30 / 18);
+  }
+}
+
+.p-blog-detail-article__contents li::before {
+  content: '・';
+  font-size: 1.6rem;
+  line-height: calc(30 / 16);
+
+  @include mq(md) {
+    font-size: 1.6rem;
+    line-height: calc(30 / 16);
+  }
+
+}
+
+.p-blog-detail-article__contents hr {
+  margin-top: 3.85rem;
+  border: none;
+  border-top: solid 0.05rem $color-main;
+}
+
+.p-blog-detail-article__contents h3 {
+  font-size: 2rem;
+  line-height: calc(30 / 20);
+  font-weight: $font-bold;
+  margin-top: 4.8rem;
+  position: relative;
+  padding-left: .95rem;
+
+  @include mq(md) {
+    line-height: calc(40 / 20);
+    margin-top: 4.1rem;
+  }
+}
+
+.p-blog-detail-article__contents h3:before {
+  content: '';
+  position: absolute;
+  width: 0.3rem;
+  height: 5rem;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: $color-main;
+
+  @include mq(md) {
+    height: 2rem;
+  }
+}
+
+.p-blog-detail-article__contents blockquote {
+  background: #E8E8E8;
+  padding-block: 1.7rem 1.1rem;
+  padding-right: 2rem;
+  margin-top: 1.95rem;
+}
+.p-blog-detail-article__contents blockquote p {
+  font-size: 1.6rem;
+  line-height: calc(30 / 16);
+  position: relative;
+  padding-left: 7rem;
+
+  @include mq(md) {
+    font-size: 1.8rem;
+    line-height: calc(30 / 18);
+    padding-left: 6.8rem;
+  }
+}
+
+// 引用アイコン
+.p-blog-detail-article__contents blockquote p:before {
+  content: '';
+  position: absolute;
+  width: 2.704rem;
+  height: 2.328rem;
+  left: 2.548rem;
+  top: .486rem;
+  background-image: url(../image/icon-blockquote.svg);
+  background-position: center;
+  background-size: contain;
+  
+  @include mq(md) {
+    width: 2.9rem;
+    height: 2.4967rem;
+    left: 3rem;
+    top: 0;
+    
+  }
+}
+
+.p-blog-detail-article__contents cite {
+  display: block;
+  margin-top: 2.7rem;
+
+  @include mq(md) {
+    margin-top: 2.6rem;
+  }
+}
+
+.p-blog-detail-article__contents cite a {
+  display: inline-block;
+  font-size: 2rem;
+  line-height: calc(33 / 20);
+  font-weight: $font-bold;
+  color: $color-red;
+  // border-bottom: solid .1rem $color-red;
+  position: relative;
+}
+.p-blog-detail-article__contents cite a::after {
+  content: '';
+  position: absolute;
+  width: 14rem;
+  height: .1rem;
+  left: 0;
+  bottom: .45rem;
+  background-color: $color-red;
+
+  @include mq(md) {
+    bottom: .6rem;
+  }
+}
+

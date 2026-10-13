@@ -5,20 +5,27 @@
 .c-bread {
   width: 100%;
   background-color: #e8e8e8;
+  padding-block: 0.4rem .4rem;
+
+  @include mq(md) {
+    padding-block: 0;
+  }
 }
 
 .c-bread ol {
-  padding-inline: 20px;
-  padding-block: 5px 6px;
+  padding-inline: 2rem;
+  // padding-block: .3rem 0;
+  padding-block: .6rem .1rem;
   margin-inline: auto;
   max-width: 940px;
 
   display: flex;
   flex-wrap: wrap;
-  column-gap: 2rem;
+  column-gap: 2.1rem;
 
   @include mq(md) {
-    padding-inline: 30px;
+    padding-inline: 3rem;
+    padding-block: 1rem .7rem;
   }
 }
 
@@ -31,10 +38,19 @@
   content: '>';
   margin-left: 1.8rem;
   font-size: 1.6rem;
-  line-height: calc(33 / 16);
+  line-height: calc(20 / 16);
+
+  @include mq(md) {
+    line-height: calc(33 / 16);
+  }
 }
 
 .c-bread a {
   font-size: 1.6rem;
-  line-height: calc(33 / 16);
+  // line-height: calc(26 / 16);
+  line-height: calc(20 / 16);
+
+  @include mq(md) {
+    line-height: calc(33 / 16);
+  }
 }

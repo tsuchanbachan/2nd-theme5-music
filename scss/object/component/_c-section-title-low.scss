@@ -1,0 +1,34 @@
+@use "../../global" as *;
+@use "sass:math";
+
+.c-section-title-low {
+// margin-top: 50px;
+text-align: center;
+}
+
+.c-section-title-low h2 {
+  font-size: 2.5rem;
+  line-height: calc(40 / 25);
+  font-weight: $font-bold;
+  color: $color-main;
+
+  @include mq(md) {
+    font-size: 2.5rem;
+    line-height: calc(38 / 25);
+  }
+}
+
+// .c-section-title--red h2 {
+//   color: $color-red;
+// }
+
+// .c-section-title--white h2 {
+//   color: $color-white;
+// }
+
+// .c-section-title--big h2 {
+//   @include mq(md) {
+//     font-size: 3.5rem;
+//     line-height: calc(50 / 35);
+//   }
+// }

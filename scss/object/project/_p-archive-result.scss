@@ -1,0 +1,9 @@
+@use "sass:map";
+@use '../../global' as *;
+
+.p-archive-result__list {
+  @include mq(md) {
+    padding-block: 6.5rem 21rem;
+  }
+
+}

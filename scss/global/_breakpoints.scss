@@ -78,7 +78,8 @@ $mediaqueries: (
     display: none;
 
     @include mq(md) {
-      display: block !important;
+      // display: block !important;
+      display: block;
     }
   }
 
@@ -103,7 +104,8 @@ $mediaqueries: (
     display: none;
 
     @include mq(md) {
-      display: block !important;
+      // display: block !important;
+      display: block;
     }
   }
 }

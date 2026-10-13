@@ -9,8 +9,7 @@
   top: 0;
   left: 0;
   z-index: 999;
-  // background-color: #fff;
-  background-color: yellow;
+  background-color: $color-white;
   // スクロール後に背景色変更
   // transition: background-color 0.3s;
 
@@ -19,7 +18,8 @@
     // height: 80px;
     // 
     // height: min(vw(80, 1080), 80px);
-    height: hvw($header-height-pc);
+    // height: hvw($header-height-pc);
+    height: $header-height-pc;
   }
 }
 
@@ -155,25 +155,31 @@
 
 
 // PC用
+.p-header__nav {
+  height: 100%;
+
+}
+
 .p-header__nav ul {
   display: flex;
   column-gap: 33px;
   align-items: center;
   // column-gap: 16px;
 
+
 }
 
 .p-header__nav-item a {
   @include mq(md) {
-    text-transform: uppercase;
     color: $color-main;
-    font-size: 1.8rem;
+    font-size: 1.7rem;
     line-height: 4.5rem;
     transition: opacity 0.4s;
     display: flex;
     align-items: center;
     position: relative;
-    // height: 80px;
+
+    height: 80px;
     
   }
 
@@ -182,20 +188,39 @@
   // }
 }
 
-.p-header__nav-item--contact a {
+.p-header__nav-item-contact a {
 
   @include mq(md) {
+    line-height: 4.5rem;
+    display: flex;
+    align-items: center;
+
+    height: 4.5rem;
+
     background-color: $color-red;
     color: $color-white;
     padding-inline: 3rem;
+    font-size: 1.5rem;
+    border: solid .1rem $color-red;
+    transition: background-color 0.4s, color 0.4s;
+    
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: $color-white;
+        color: $color-red;
+      }
+    }
   }
 }
+
+
 
 .p-header__nav-item a:hover::after {
   @media (any-hover: hover) {
     transform: scaleX(1);
   }
 }
+
 
 // 下線
 .p-header__nav-item a::after {

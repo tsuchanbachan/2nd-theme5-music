@@ -13,6 +13,20 @@
   justify-content: center;
   // 要・調整
   padding-top: 25px;
+
+  margin-left: auto;
+
+  @include mq(md) {
+    margin-inline: auto;
+  }
+  transition: opacity 0.4s;
+}
+  
+.c-to-top-arrow:hover {
+  @media (any-hover: hover) {
+    opacity: 0.7;
+
+  }
 }
 
 .c-to-top-arrow span {

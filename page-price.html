@@ -23,17 +23,18 @@
   <div id="container">
 
     <!-- ヘッダー -->
+    <!-- ヘッダー -->
     <header class="p-header">
       <div class="p-header__inner">
         <div class="p-header__logo">
-          <a href="#">
+          <a href="./index.html">
             <div class="p-header__image"><img src="./image/logo-red.svg" alt="きたむらミュージックスクールのロゴ"></div>
             <p class="p-header__company">
               <span>きたむら</span><br class="pc">ミュージックスクール
             </p>
           </a>
         </div>
-
+    
         <!-- SP用 -->
         <div class="p-header__sp sp">
           <button id="js-hamburger" class="p-header__hamburger c-hamburger">
@@ -41,35 +42,36 @@
             <span></span>
             <span></span>
           </button>
-
+    
           <!-- SPドロワーメニュー -->
           <div class="p-header__menu">
             <nav>
               <ul>
-                <li><a href="#price">料金</a></li>
+                <!-- <li><a href="#price">料金</a></li> -->
+                <li><a href="./page-price.html">料金</a></li>
                 <li><a href="#blog">ブログ</a></li>
                 <li><a href="#result">卒業実績</a></li>
               </ul>
             </nav>
           </div>
         </div>
-
+    
         <!-- PC用ヘッダーメニュー -->
         <nav class="p-header__nav pc">
           <ul>
-            <li class="p-header__nav-item"><a href="#price">料金</a></li>
+            <li class="p-header__nav-item"><a href="./page-price.html">料金</a></li>
             <li class="p-header__nav-item"><a href="#blog">ブログ</a></li>
             <li class="p-header__nav-item"><a href="#result">卒業実績</a></li>
-            <li class="p-header__nav-item p-header__nav-item--contact"><a href="#contact">お問い合わせ</a></li>
+            <li class="p-header__nav-item-contact"><a href="#contact">お問い合わせ</a></li>
           </ul>
         </nav>
-
+    
       </div>
     </header>
 
-    <main class="main">
+    <main class="main p-page-price">
       <!-- 下層fv -->
-      <div class="p-fv">
+      <div class="p-page-price__fv p-fv js-button-trigger">
         <div class="p-fv__image">
           <picture>
             <source media="(min-width: 768px)" srcset="./image/plan-mv-pc.jpg">
@@ -85,285 +87,251 @@
       </div>
 
       <!-- パンくずリスト -->
-      <div class="">
+      <div class="p-page-price__bread">
         <div class="c-bread">
           <ol>
             <li><a href="#">ホーム</a></li>
             <li><a href="#">プラン・料金</a></li>
-            <li><a href="#">3つ目</a></li>
-            <li><a href="#">4つ目4つ目4つ目4つ目4つ目</a></li>
           </ol>
 
         </div>
       </div>
 
-      <!--  -->
-      <section id="" class="price">
+      <!-- 料金体系 -->
+      <section id="" class="p-page-price__system p-page-price-system">
         <div class="l-inner">
 
           <!-- セクションタイトル -->
-          <div class="c-section-title">
+          <div class="p-page-price-system__title c-section-title-low">
             <h2>料金体系</h2>
           </div>
 
-          <!-- 流れ（ミュージシャン計画）赤い線 -->
-          <div class="p-top-flow-plan-wrap">
-            <!-- 1つ目の項目 -->
-            <div class="p-top-flow-plan">
-              <p class="p-top-flow-plan__english">enthusiasm</p>
-              <div class="p-top-flow-plan__design c-flow">
-                <span class="p-top-flow-plan__span p-top-flow-plan__design--up-goal"></span>
-              </div>
-              <p class="p-top-flow-plan__japanese">熱狂し</p>
+          <div class="p-page-price-system__contents">
+            <div class="p-page-price-system__image">
+              <p class="p-page-price-system__box">入会金 39,000円</p>
+              <div class="p-page-price-system__plus"><img src="./image/icon-plus.png" alt="+記号"></div>
+              <p class="p-page-price-system__box">月額料金</p>
             </div>
-
-            <!-- 2つ目の項目 -->
-            <div class="p-top-flow-plan">
-              <p class="p-top-flow-plan__english">envision</p>
-              <div class="p-top-flow-plan__design c-flow">
-                <span class="p-top-flow-plan__span"></span>
-              </div>
-              <p class="p-top-flow-plan__japanese">想像し</p>
-            </div>
-
-            <!-- 3つ目の項目 -->
-            <div class="p-top-flow-plan">
-              <p class="p-top-flow-plan__english">effulgent</p>
-              <div class="p-top-flow-plan__design c-flow">
-                <span class="p-top-flow-plan__span"></span>
-              </div>
-              <p class="p-top-flow-plan__japanese">輝く存在へ</p>
-            </div>
+            <p class="p-page-price-system__text">
+              きたむらミュージックスクールでは、個人に合わせたサポートを行う完全オーダーメイドのプランを用意しており、サポート内容により月額料金が異なります。担当者があなたに最適なプランを提案いたしますので、お気軽にお問い合わせください。※すべての料金は税込価格となります。
+            </p>
           </div>
-
-
-          <!-- 流れ（ご利用の流れ）赤い線 -->
-          <div class="p-top-flow-use-wrap">
-            <!-- 1つ目の項目 -->
-            <div class="p-top-flow-use">
-              <div class="p-top-flow-use__design c-flow">
-                <span class="c-flow--down"></span>
-              </div>
-              <div class="p-top-flow-use__content">
-                <h3 class="p-top-flow-use__title">お問い合わせ</h3>
-                <p class="p-top-flow-use__text">
-                  まずはフォームまたはメールにてお問い合わせください。<br>
-                  ヒアリングの日程を調整します。
-                </p>
-              </div>
-            </div>
-
-            <!-- 2つ目の項目 -->
-            <div class="p-top-flow-use">
-              <div class="p-top-flow-use__design c-flow">
-                <span class="c-flow--down"></span>
-              </div>
-              <div class="p-top-flow-use__content">
-                <h3 class="p-top-flow-use__title">ヒアリング</h3>
-                <p class="p-top-flow-use__text">
-                  現在の技術面や将来の目標などをお伺いします。<br>
-                  悩みや不安な事もお気軽にご相談ください。
-                </p>
-              </div>
-            </div>
-            <!-- 3つ目の項目 -->
-            <div class="p-top-flow-use">
-              <div class="p-top-flow-use__design c-flow">
-                <span class="c-flow--down"></span>
-              </div>
-              <div class="p-top-flow-use__content">
-                <h3 class="p-top-flow-use__title">プランのご提案</h3>
-                <p class="p-top-flow-use__text">
-                  ライフスタイルや目標によって最適なプランをご提案します。<br>
-                  継続できるようサポートいたします。
-                </p>
-              </div>
-            </div>
-            <!-- ４つ目の項目 -->
-            <div class="p-top-flow-use">
-              <div class="p-top-flow-use__design  c-flow p-top-flow-use__design--down-goal">
-                <span class="c-flow--down"></span>
-              </div>
-              <div class="p-top-flow-use__content">
-                <h3 class="p-top-flow-use__title">ご入学</h3>
-                <p class="p-top-flow-use__text">
-                  お申し込み完了後、レッスンがスタートします。<br>
-                  マンツーマン指導なので、いつからでもスタートが可能です。
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <!-- 選ばれる理由 -->
-          <div class="">
-            <div class="p-top-reason__media">
-              <img src="./image/reason1-sp.jpg" alt="選ばれる理由1">
-            </div>
-            <div class="p-top-reason__content">
-              <h3>技術面はプロによるマンツーマン授業！</h3>
-              <p>第一線で活躍するプロによるマンツーマン授業で、きめ細かな技術指導が受けられます。</p>
-            </div>
-          </div>
-
-          <!-- 生徒の声カード群 -->
-          <ul class="p-top-voice-cards">
-            <!-- 生徒の声カード1 -->
-            <li class="p-top-voice-card">
-              <a href="#">
-                <div class="p-top-voice-card__media">
-                  <picture>
-                    <source media="(min-width: 768px)" srcset="./image/voice1-pc.jpg">
-                    <img src="./image/voice1-sp.jpg" alt="生徒の声１">
-                  </picture>
-                </div>
-                <div class="p-top-voice-card__body">
-                  <h3>証券会社勤務　丸山さん</h3>
-                  <p>昔やっていた音楽活動で、副収入が得られるようになったので、毎日充実するようになりました。</p>
-                </div>
-              </a>
-            </li>
-            <!-- 生徒の声カード2 -->
-            <li class="p-top-voice-card">
-              <a href="#">
-                <div class="p-top-voice-card__media">
-                  <picture>
-                    <source media="(min-width: 768px)" srcset="./image/voice1-pc.jpg">
-                    <img src="./image/voice1-sp.jpg" alt="生徒の声１">
-                  </picture>
-                </div>
-                <div class="p-top-voice-card__body">
-                  <h3>IT会社勤務　S.Eさん</h3>
-                  <p>プロの指導が受けられるので、技術が確実に上がるし、音楽への考え方とかも勉強できて最高です。</p>
-                </div>
-              </a>
-            </li>
-            <!-- 生徒の声カード3 -->
-            <li class="p-top-voice-card">
-              <a href="#">
-                <div class="p-top-voice-card__media">
-                  <picture>
-                    <source media="(min-width: 768px)" srcset="./image/voice1-pc.jpg">
-                    <img src="./image/voice1-sp.jpg" alt="生徒の声１">
-                  </picture>
-                </div>
-                <div class="p-top-voice-card__body">
-                  <h3>都内大学生　田森さん</h3>
-                  <p>就職する前にビジネスの事が学べるし、好きな音楽で稼げるようになったので選択肢が増えました。</p>
-                </div>
-              </a>
-            </li>
-
-          </ul>
-
-          <!-- ブログ群 -->
-          <ul>
-            <li class="p-top-blog-card">
-              <a class="" href="#">
-                <div class="p-top-blog-card__media c-label-image">
-                  <img src="./image/blog1-pc.jpg" alt="ブログ１">
-                  <span>ブログ群</span>
-                </div>
-                <div class="p-top-blog-card__body">
-                  <p>
-                    フォロワーではなくファンを増やせとは？
-                  </p>
-                  <time datetime="0000.00.00">0000.00.00</time>
-                </div>
-              </a>
-            </li>
-          </ul>
-
-          <div class="c-pagination">
-            <a href="#" class="is-active">1</a>
-            <a href="#">2</a>
-            <a href="#">3</a>
-            <span>…</span>
-            <a href="#">9</a>
-          </div>
-
-          <!-- To Topボタン -->
-          <div class="c-to-top-arrow">
-            <span></span>
-          </div>
-
-
         </div>
-
       </section>
 
-      <!-- 下層　実績一覧ページ -->
-      <section id="a" class="page-result-table">
+      <!-- プラン内容・月額料金 -->
+      <section id="" class="p-page-price__price p-page-price-price">
         <div class="l-inner">
-          <div class="p-result-card-lists">
-            <!-- 実績一覧カード1 -->
-            <li class="p-result-card">
-              <a class="" href="#">
-                <div class="p-result-card__media c-label-image">
-                  <img src="./image/result01-pc.jpg" alt="卒業実績１">
-                  <span>下層実績</span>
-                </div>
-                <div class="p-result-card__body">
-                  <p>
-                    タイトルが入ります。タイトルが入ります。タイトルが入ります。
-                  </p>
-                  <time datetime="0000.00.00">0000.00.00</time>
-                </div>
-              </a>
 
-            </li>
-            <!-- 実績一覧カード2 -->
-            <a class="p-result-card" href="#">
-              <div class="p-result-card__media c-label-image">
-                <img src="./image/result01-pc.jpg" alt="卒業実績１">
-                <span>ポップス</span>
-              </div>
-              <div class="p-result-card__body">
-                <p>
-                  タイトルが入ります。タイトルが入ります。タイトルが入ります。
-                </p>
-                <time datetime="0000.00.00">0000.00.00</time>
-              </div>
-            </a>
-            <!-- 実績一覧カード3 -->
-            <a class="p-result-card" href="#">
-              <div class="p-result-card__media c-label-image">
-                <img src="./image/result01-pc.jpg" alt="卒業実績１">
-                <span>ポップス</span>
-              </div>
-              <div class="p-result-card__body">
-                <p>
-                  タイトルが入ります。タイトルが入ります。タイトルが入ります。
-                </p>
-                <time datetime="0000.00.00">0000.00.00</time>
-              </div>
-            </a>
-            <!-- 実績一覧カード４ -->
-            <a class="p-result-card" href="#">
-              <div class="p-result-card__media c-label-image">
-                <img src="./image/result01-pc.jpg" alt="卒業実績１">
-                <span>ポップス</span>
-              </div>
-              <div class="p-result-card__body">
-                <p>
-                  タイトルが入ります。タイトルが入ります。タイトルが入ります。
-                </p>
-                <time datetime="0000.00.00">0000.00.00</time>
-              </div>
-            </a>
-            
+          <!-- セクションタイトル -->
+          <div class="p-page-price-price__title c-section-title-low">
+            <h2>プラン内容・月額料金</h2>
           </div>
 
+          <div class="p-page-price-price__contents">
+            <div class="p-page-price-price__table">
+              <table>
+                <thead>
+                  <!-- タイトル行 -->
+                  <tr>
+                    <th></th>
+                    <th class="p-page-price-price__usually">ベーシック<br class="sp">プラン</th>
+                    <!-- <th class="p-page-price-price__strong">スタンダード<br class="sp">プラン</th> -->
+                    <th class="p-page-price-price__strong">
+                      <span class="p-page-price-price__recommend">おすすめ</span>
+                      <span class="p-page-price-price__plan">スタンダード<br class="sp">プラン</span>
+                    </th>
+                    <th class="p-page-price-price__usually">プレミアム<br class="sp">プラン</th>
+                  </tr>
+                </thead>
+              
+                <tbody>
+                  <tr class="p-page-price-price__charge">
+                    <th>月額料金</th>
+                    <td>39,000円</td>
+                    <td class="p-page-price-price__strong">59,000円</td>
+                    <!-- <td>
+                      <div class="p-page-price-price__cell">
+                        <span class="p-page-price-price__note">59,000円</span>
+                      </div>
+                    </td> -->
+                    <td>128,000円</td>
+                  </tr>
+                  <!-- マンツーマン -->
+                  <tr class="p-page-price-price__detail">
+                    <th>マンツーマン授業</th>
+                    <td>
+                      <div class="p-page-price-price__cell">
+                        <span class="p-page-price-price__mark"></span>
+                        <span class="p-page-price-price__note">週１回</span>
+                      </div>
+                    </td>
+                    <td class="p-page-price-price__strong">
+                      <div class="p-page-price-price__cell">
+                        <span class="p-page-price-price__mark"></span>
+                        <span class="p-page-price-price__note">週２回</span>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="p-page-price-price__cell">
+                        <span class="p-page-price-price__mark"></span>
+                        <span class="p-page-price-price__note">無制限</span>
+                      </div>
+                    </td>
+                  </tr>
+                  <!-- ビジネス -->
+                  <tr class="p-page-price-price__detail">
+                    <th>ビジネス基本講座</th>
+                      <td>
+                        <div class="p-page-price-price__cell">
+                          <span class="p-page-price-price__mark"></span>
+                        </div>
+                      </td>
+                      <td class="p-page-price-price__strong">
+                        <div class="p-page-price-price__cell">
+                          <span class="p-page-price-price__mark"></span>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="p-page-price-price__cell">
+                          <span class="p-page-price-price__mark"></span>
+                        </div>
+                      </td>
+                  </tr>
+                  <!-- 練習ルーム -->
+                  <tr class="p-page-price-price__detail">
+                    <th>練習ROOM利用</th>
+                    <td>
+                      <div class="p-page-price-price__cell">
+                        <span class="p-page-price-price__mark"></span>
+                        <span class="p-page-price-price__note">月10時間</span>
+                      </div>
+                    </td>
+                    <td class="p-page-price-price__strong">
+                      <div class="p-page-price-price__cell">
+                        <span class="p-page-price-price__mark"></span>
+                        <span class="p-page-price-price__note">月20時間</span>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="p-page-price-price__cell">
+                        <span class="p-page-price-price__mark"></span>
+                        <span class="p-page-price-price__note">無制限</span>
+                      </div>
+                    </td>
+                  </tr>
+                  <!-- コンサル -->
+                  <tr class="p-page-price-price__detail">
+                    <th>ビジネスコンサル</th>
+                    <td>
+                      <div class="p-page-price-price__cell">
+                        <span class="p-page-price-price__bar"></span>
+                      </div>
+                    </td>
+
+                    <td class="p-page-price-price__strong">
+                      <div class="p-page-price-price__cell">
+                        <span class="p-page-price-price__mark"></span>
+                        <span class="p-page-price-price__note">月２回</span>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="p-page-price-price__cell">
+                        <span class="p-page-price-price__mark"></span>
+                        <span class="p-page-price-price__note">月３回</span>
+                      </div>
+                    </td>
+                  </tr>
+                  <!-- コミュニティ -->
+                  <tr class="p-page-price-price__detail">
+                    <th>コミュニティ<br class="sp">参加資格</th>
+                    <td>
+                      <div class="p-page-price-price__cell">
+                        <span class="p-page-price-price__bar"></span>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="p-page-price-price__cell">
+                        <span class="p-page-price-price__bar"></span>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="p-page-price-price__cell">
+                        <span class="p-page-price-price__mark"></span>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <p class="p-page-price-price__text">
+              ※各サービスは１回ごとのオプション追加が可能です。詳しくは事務局までお問い合わせください。
+            </p>
+          </div>
         </div>
       </section>
+
+      <!-- ボタンエリア -->
+      <div class="p-top__buttons p-button-area" id="buttons">
       
-      <!-- お問い合わせボタン -->
-      <div class="c-button">
-        <a href="#">お問い合わせ</a>
+        <!-- To Topボタン -->
+        <a href="#" class="p-button-area__arrow c-to-top-arrow">
+          <span></span>
+        </a>
+        <!-- </div> -->
+      
+        <!-- お問い合わせボタン -->
+        <div class="p-button-area__contact c-button">
+          <a href="#">お問い合わせ</a>
+        </div>
+      
       </div>
 
     </main>
 
-    <footer class="footer">
+    <footer class="p-footer">
+      <div class="p-footer__inner l-inner">
+        <div class="p-footer__content">
+          <nav class="p-footer__nav">
+            <ul>
+              <li><a href="./index.html">ホーム</a></li>
+              <li><a href="./page-price.html">料金</a></li>
+              <li><a href="#blog">ブログ</a></li>
+              <li><a href="#result">卒業実績</a></li>
+            </ul>
+          </nav>
+          <div class="p-footer__company"><a href="#"><img src="./image/logo-white.svg" alt="きたむらミュージックスクールのロゴ"></a></div>
+        </div>
+
+        <div class="p-footer__copyright">
+          <p>Copyright &copy; 0000 KITAMURA music school Inc. All Rights</p>
+          <div class="p-footer__sns">
+            <ul class="p-footer__sns-items sns">
+              <li class="sns__list">
+                <a href="#" class="sns__link x" target="_blank" rel="noopener noreferrer">
+                  <img src="./image/icon-twitter.svg" alt="x">
+                </a>
+              </li>
+              <li class="sns__list">
+                <a href="#" class="sns__link fb" target="_blank" rel="noopener noreferrer">
+                  <img src="./image/icon-facebook.svg" alt="facebook">
+                </a>
+              </li>
+              <li class="sns__list">
+                <a href="#" class="sns__link youtube" target="_blank" rel="noopener noreferrer">
+                  <img src="./image/icon-youtube.svg" alt="youtube">
+                </a>
+              </li>
+              <li class="sns__list">
+                <a href="#" class="sns__link insta" target="_blank" rel="noopener noreferrer">
+                  <img src="./image/icon-instagram.svg" alt="instagram">
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
 
     </footer>
 

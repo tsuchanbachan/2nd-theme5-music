@@ -36,6 +36,16 @@ body.is-fixed {
   overflow: hidden;
 }
 
+// main
+// .p-top {
+main {
+  padding-top: $header-height-sp;
+
+  @include mq(md) {
+    padding-top: hvw($header-height-pc);
+  }
+}
+
 // はみ出し保険
 #container {
   width: 100%;

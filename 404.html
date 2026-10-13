@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>きたむらミュージックスクール</title>
+  <meta name="description" content="きたむらミュージックスクールの公式サイトです">
+  <!-- noindex -->
+  <meta name="robots" content="noindex">
+  <!-- font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+  <!-- favicon -->
+
+  <!-- css -->
+  <link rel="stylesheet" href="./css/style.css">
+
+</head>
+
+<body>
+  <div id="container">
+
+    <!-- ヘッダー -->
+    <header class="p-header">
+      <div class="p-header__inner">
+        <div class="p-header__logo">
+          <a href="./index.html">
+            <div class="p-header__image"><img src="./image/logo-red.svg" alt="きたむらミュージックスクールのロゴ"></div>
+            <p class="p-header__company">
+              <span>きたむら</span><br class="pc">ミュージックスクール
+            </p>
+          </a>
+        </div>
+    
+        <!-- SP用 -->
+        <div class="p-header__sp sp">
+          <button id="js-hamburger" class="p-header__hamburger c-hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+    
+          <!-- SPドロワーメニュー -->
+          <div class="p-header__menu">
+            <nav>
+              <ul>
+                <!-- <li><a href="#price">料金</a></li> -->
+                <li><a href="./page-price.html">料金</a></li>
+                <li><a href="#blog">ブログ</a></li>
+                <li><a href="#result">卒業実績</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+    
+        <!-- PC用ヘッダーメニュー -->
+        <nav class="p-header__nav pc">
+          <ul>
+            <li class="p-header__nav-item"><a href="./page-price.html">料金</a></li>
+            <li class="p-header__nav-item"><a href="#blog">ブログ</a></li>
+            <li class="p-header__nav-item"><a href="#result">卒業実績</a></li>
+            <li class="p-header__nav-item-contact"><a href="#contact">お問い合わせ</a></li>
+          </ul>
+        </nav>
+    
+      </div>
+    </header>
+
+    <main class="main p-404">
+      <!-- 下層fv -->
+      <div class="p-404__fv p-fv js-button-trigger">
+        <div class="p-fv__image">
+          <picture>
+            <source media="(min-width: 768px)" srcset="./image/404-mv-pc.jpg">
+            <img src="./image/404-mv-sp.jpg" alt="きたむらミュージックスクールコンタクトページのファーストビュー">
+          </picture>
+        </div>
+
+        <div class="p-fv__contents">
+          <div class="p-fv__catch">
+            <h1>404 not fonud</h1>
+          </div>
+        </div>
+      </div>
+
+      <!-- パンくずリスト -->
+      <!-- <div class="p-404__bread">
+        <div class="c-bread">
+          <ol>
+            <li><a href="#">ホーム</a></li>
+            <li><a href="#">送信完了</a></li>
+          </ol>
+        </div>
+      </div> -->
+
+      <!-- 404メッセージ -->
+      <div id="" class="p-404__section">
+        <div class="p-404__section-inner l-inner">
+          <div class="p-404__section-text">
+            <p>
+              申し訳ございませんが、お探しのページが見つかりませんでした。<br>お探しのページは一時的に表示ができない状態にあるか、移動または削除された可能性があります。
+            </p>
+          </div>
+
+          <!-- ボタン -->
+          <div class="p-404__section-button">
+            <a href="#">ホームへ戻る</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ボタンエリア -->
+      <!-- <div class="p-page-contact__button-area p-button-area" id="buttons">
+        <a href="#" class="p-button-area__arrow c-to-top-arrow">
+          <span></span>
+        </a>
+
+        <div class="p-button-area__contact c-button">
+          <a href="#">お問い合わせ</a>
+        </div>
+      </div> -->
+
+    </main>
+
+    <footer class="p-footer">
+      <div class="p-footer__inner l-inner">
+        <div class="p-footer__content">
+          <nav class="p-footer__nav">
+            <ul>
+              <li><a href="./index.html">ホーム</a></li>
+              <li><a href="./page-price.html">料金</a></li>
+              <li><a href="#blog">ブログ</a></li>
+              <li><a href="#result">卒業実績</a></li>
+            </ul>
+          </nav>
+          <div class="p-footer__company"><a href="#"><img src="./image/logo-white.svg" alt="きたむらミュージックスクールのロゴ"></a></div>
+        </div>
+
+        <div class="p-footer__copyright">
+          <p>Copyright &copy; 0000 KITAMURA music school Inc. All Rights</p>
+          <div class="p-footer__sns">
+            <ul class="p-footer__sns-items sns">
+              <li class="sns__list">
+                <a href="#" class="sns__link x" target="_blank" rel="noopener noreferrer">
+                  <img src="./image/icon-twitter.svg" alt="x">
+                </a>
+              </li>
+              <li class="sns__list">
+                <a href="#" class="sns__link fb" target="_blank" rel="noopener noreferrer">
+                  <img src="./image/icon-facebook.svg" alt="facebook">
+                </a>
+              </li>
+              <li class="sns__list">
+                <a href="#" class="sns__link youtube" target="_blank" rel="noopener noreferrer">
+                  <img src="./image/icon-youtube.svg" alt="youtube">
+                </a>
+              </li>
+              <li class="sns__list">
+                <a href="#" class="sns__link insta" target="_blank" rel="noopener noreferrer">
+                  <img src="./image/icon-instagram.svg" alt="instagram">
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </footer>
+
+  </div>
+
+  <!-- JavaScript -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

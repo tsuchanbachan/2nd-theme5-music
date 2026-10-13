@@ -1,0 +1,221 @@
+@use "../../global" as *;
+@use "sass:math";
+
+.p-page-price-price {
+  // padding-block: 0 12.6rem;
+  padding-block: 0 18.6rem;
+
+  @include mq(md) {
+    padding-block: 0 22.3rem;
+  }
+}
+
+.p-page-price-price__contents {
+  // margin-top: 3.6rem;
+}
+
+.p-page-price-price__table {
+  width: 100%;
+  overflow-x: auto;
+  // スタンダード列のはみ出し用（overvlowがあるので、非表示になってしまう）
+  padding-top: 3.5rem;
+  // 横スクロールバーとの余白
+  padding-bottom: 1.7rem;
+
+  @include mq(md) {
+    padding-top: 7.7rem;
+    padding-bottom: 0;
+  }
+}
+.p-page-price-price__table table {
+  width: 67rem;
+  table-layout: fixed;
+  // border-collapse: collapse;
+
+  @include mq(md) {
+    width: 88rem;
+  }
+}
+
+.p-page-price-price__table th,
+.p-page-price-price__table td {
+  width: 16.75rem;
+  padding-inline: 1rem;
+  padding-block: .6rem 0;
+  // 縦中央。inline、inline-block、テーブルのみ有効
+  vertical-align: middle;
+
+  @include mq(md) {
+    width: 22rem;
+    padding-inline: 2rem;
+  }
+}
+
+.p-page-price-price__table tbody {
+  border-top: .05rem solid black;
+  border-bottom: .05rem solid black;
+}
+
+.p-page-price-price__table td {
+  border-left: .05rem solid black;
+}
+
+.p-page-price-price__table tbody tr:nth-child(even) {
+  background-color: rgb(80 80 80 / 14.9%);
+}
+
+// タイトル行
+.p-page-price-price__table thead th {
+  font-size: 2rem;
+  line-height: calc(25 / 20);
+  font-weight: $font-bold;
+  text-align: center;
+  color: $color-white;
+}
+
+.p-page-price-price__table thead th.p-page-price-price__strong {
+  background-color: $color-red;
+  position: relative;
+}
+
+// タイトル行の上に飛び出した部分（スタンダードプラン）
+.p-page-price-price__table thead th.p-page-price-price__strong::before {
+  position: absolute;
+  content: '';
+  left: 0;
+  right: 0;
+  // 境界線を出さない対策
+  bottom: calc(100% - .1rem);
+  height: 3rem;
+  background-color: $color-red;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+// 文字位置の調整
+.p-page-price-price__recommend {
+  position: absolute;
+  // bottom: 100%;
+
+  left: 50%;
+  // スタンダードせるの上端に置く
+  top: 0;
+  // top0のままだと文字上端がラインに揃うので、translateY50%で文字高さの半分を上にずらす
+  transform: translate(-50%, -50%);
+  // 改行させない
+  white-space: nowrap;
+}
+
+.p-page-price-price__table thead th.p-page-price-price__usually {
+  background-color: $color-main;
+}
+
+// 金額行
+.p-page-price-price__charge th {
+  font-weight: $font-bold;
+  font-size: 1.6rem;
+  line-height: calc(30 / 16);
+}
+
+.p-page-price-price__charge td {
+  font-weight: $font-bold;
+  font-size: 2.2rem;
+  line-height: calc(33 / 22);
+  text-align: center;
+}
+
+// 詳細説明行
+.p-page-price-price__detail th {
+  font-size: 1.6rem;
+  line-height: calc(25 / 16);
+}
+.p-page-price-price__detail td {
+  font-size: 1.7rem;
+  line-height: calc(25 / 17);
+  text-align: center;
+}
+
+// 高さ
+.p-page-price-price__table table thead tr {
+  height: 6.6rem;
+
+  @include mq(md) {
+    height: 5rem;
+  }
+
+}
+
+.p-page-price-price__table table tbody tr {
+  height: 8.5rem;
+
+}
+
+// ２段行
+.p-page-price-price__cell {
+  display: flex;
+  flex-direction: column;
+  // align-items: center;
+  // justify-content: center;
+  row-gap: 0.8rem;
+  // text-align: center;
+}
+
+// 「◯」
+.p-page-price-price__mark {
+  // content: '';
+  width: 1.5rem;
+  height: 1.5rem;
+  display: block;
+  border-radius: 50%;
+  margin-inline: auto;
+
+  background-color: $color-main;
+
+}
+
+// スタンダードプランの強調
+.p-page-price-price__charge .p-page-price-price__strong {
+  color: $color-red;
+}
+
+.p-page-price-price__strong .p-page-price-price__mark {
+  background-color: $color-red;
+}
+
+// 「ー」
+.p-page-price-price__bar {
+  // content: '';
+  width: 3rem;
+  height: .1rem;
+  display: block;
+  background-color: #707070;
+  margin-inline: auto;
+  margin-bottom: .8rem;
+}
+
+// スクロールバー
+// 全体
+.p-page-price-price__table::-webkit-scrollbar {
+  height: 2.3rem;
+}
+// 薄いグレーの長い部分
+.p-page-price-price__table::-webkit-scrollbar-track {
+  background-color: rgb(80 80 80 / 14.9% );
+}
+// 濃いグレーの100pxの部分
+.p-page-price-price__table::-webkit-scrollbar-thumb {
+  background-color: rgb(50 50 50 / 25.1%);
+}
+
+.p-page-price-price__text {
+  font-size: 1.6rem;
+  line-height: calc(30 / 16);
+  margin-top: 1.7rem;
+
+  @include mq(md) {
+    font-size: 1.7rem;
+    line-height: calc(25 / 17);
+    margin-top: 2.9rem;
+  }
+}

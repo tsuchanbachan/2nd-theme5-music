@@ -1,0 +1,66 @@
+@use "../../global" as *;
+@use "sass:math";
+
+.p-page-price-system {
+  padding-block: 4.6rem 3.8rem;
+
+  @include mq(md) {
+    padding-block: 6.7rem 5.8rem;
+  }
+}
+
+.p-page-price-system__contents {
+  margin-top: 3.9rem;
+}
+
+.p-page-price-system__image {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+  align-items: center;
+
+  @include mq(md) {
+    flex-direction: row;
+    column-gap: 3rem;
+    justify-content: center;
+  }
+}
+
+.p-page-price-system__box {
+  font-size: 2rem;
+  line-height: 6rem;
+  font-weight: $font-bold;
+  background-color: $color-red;
+  width: 21rem;
+  text-align: center;
+  color: $color-white;
+  // margin-inline: auto;
+
+  @include mq(md) {
+    // margin-inline: 0;
+  }
+}
+
+.p-page-price-system__plus {
+  width: 1.9rem;
+  // margin-inline: auto;
+}
+
+.p-page-price-system__plus img {
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+
+
+.p-page-price-system__text {
+  margin-top: 4.7rem;
+  font-size: 1.6rem;
+  line-height: calc(30 / 16);
+
+  @include mq(md) {
+    margin-top: 4.8rem;
+    font-size: 1.8rem;
+    line-height: calc(30 / 18);
+  }
+}

@@ -2,8 +2,20 @@
 @use "sass:math";
 
 .p-top-dream {
-  
+  padding-block: 4.6rem calc(3.4rem + 1.5rem);
+
+  @include mq(md) {
+    padding-block: 6.6rem calc(5.5rem + 1.25rem);
+  }
 }
+
+.p-top-dream__contents {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+// タイトル下のメッセージとアーチ
 .p-top-dream__text {
   margin-top: 0.7rem;
 
@@ -13,7 +25,7 @@
 }
 
 .p-top-dream__text::after {
-  content:'';
+  content: '';
   display: block;
   background: url("../image/about_arch-sp.png") no-repeat center / contain;
   width: 100%;
@@ -22,6 +34,8 @@
 
   @include mq(md) {
     background: url("../image/about_arch-pc.png") no-repeat center / contain;
+    width: calc(858 / 1080 * 100vw);
+    aspect-ratio: 858 / 56;
     margin-top: 3.4rem;
   }
 }
@@ -35,6 +49,166 @@
   }
 }
 
-.p-top-dream__image {
-  margin-top: 100px;
+// イメージ図
+// ------------------------------
+.p-top-dream__steps {
+  // padding-topと矢印の縦線のheightと合わせる
+  padding-top: 4.15rem;
+  position: relative;
+  margin-top: 1.2rem;
+
+  // ピクパ調整
+  padding-right: 1rem;
+
+  @include mq(md) {
+    
+    // ピクパ調整
+    // padding-top: 3.88rem;
+    padding-top: 3.3rem;
+    margin-top: 0.4rem;
+    // margin-top: 0;
+    padding-right: 2.7rem;
+  }
+
 }
+
+// 矢印の矢
+.p-top-dream__steps::after {
+  content: '';
+  width: 2.235rem;
+  height: 2.235rem;
+  border-top: 0.3rem solid $color-red;
+  border-left: 0.3rem solid $color-red;
+
+  position: absolute;
+  top: 0;
+  left: 50%;
+  // transralteXはピクパで調整
+  transform: translateX(-1rem) rotate(45deg);
+
+
+  // @include mq(md) {
+  //   transform: translateX(14%) rotate(45deg);
+  // }
+}
+
+
+
+.p-top-dream__step {
+  display: flex;
+  align-items: flex-end;
+}
+
+// 2つ目の◯の上の余白
+// line-height：１で計算
+// .p-top-dream__step:not(:first-of-type) {
+.p-top-dream__step:nth-of-type(2) {
+  padding-top: calc(1.5rem + 1.7rem + 1.5rem);
+
+  @include mq(md) {
+    padding-top: calc(1.25rem + 1.7rem + 1.25rem);
+  }
+}
+
+// ３つ目の◯の上の余白
+.p-top-dream__step:nth-of-type(3) {
+  padding-top: calc(1.5rem + 2rem + 1.5rem);
+
+  @include mq(md) {
+    padding-top: calc(1.25rem + 2rem + 1.25rem);
+  }
+}
+
+.p-top-dream__english {
+  font-size: 2rem;
+  // line-height: 5rem;
+  line-height: 1;
+  font-weight: $font-bold;
+  color: $color-red;
+  padding-right: 3rem;
+  width: calc(11.5rem + 3rem);
+  text-align: right;
+  text-transform: capitalize;
+  word-break: keep-all;
+
+  @include mq(md) {
+    font-size: 2.5rem;
+    width: calc(14.5rem + 3rem);
+  }
+}
+
+// 赤い円
+.p-top-dream__japanese::before {
+  content: '';
+  display: block;
+  width: 2rem;
+  height: 2rem;
+  background-color: $color-red;
+  border-radius: 50%;
+  margin-right: 3rem;
+}
+
+// 赤い縦線
+.p-top-dream__japanese::after {
+  position: absolute;
+  content: '';
+  display: block;
+  width: .3rem;
+  background-color: $color-red;
+  // ピクパで調整？（丸から突き抜ける予防）
+  // bottom: 0;
+  bottom: 0.1rem;
+  // tagsで調整？
+  // left: calc(1rem - .15rem);
+  left: 0.9rem;
+}
+
+// 赤い縦線：1つ目の上
+.p-top-dream__step:first-of-type .p-top-dream__japanese::after {
+  height: calc(100% + 4.15rem);
+
+  @include mq(md) {
+    // ピクパで調整
+    height: calc(100% + 3.5rem)
+  }
+}
+
+// 赤い縦線：2つ目の上
+.p-top-dream__step:nth-of-type(2) .p-top-dream__japanese::after {
+  // 丸＋「p-top-dream__step」のpadding-top高さ＋テキストの文字高さと◯高さの差
+  height: calc(100% + 1.5rem * 2 + 1.7rem);
+
+  @include mq(md) {
+      // PCは、更にテキストの文字高さと◯高さの差の1/2を加算
+    height: calc(100% + 1.25rem * 2 + 1.7rem + .1rem);
+  }
+}
+
+// 赤い縦線：3つ目の上
+.p-top-dream__step:nth-of-type(3) .p-top-dream__japanese::after {
+  height: calc(100% + 1.5rem * 2 + 2rem);
+
+  @include mq(md) {
+    height: calc(100% + 1.25rem * 2 + 2rem + .1rem);
+  }
+}
+
+
+.p-top-dream__japanese {
+  font-size: 2rem;
+  // line-height: 5rem;
+  line-height: 1;
+  color: $color-main;
+
+  display: flex;
+  align-items: center;
+
+  position: relative;
+
+  @include mq(md) {
+    font-size: 2.3rem;
+
+  }
+}
+
+

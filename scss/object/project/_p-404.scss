@@ -1,0 +1,50 @@
+@use "../../global" as *;
+@use "sass:math";
+
+.p-404__section {
+  padding-block: 4.7rem 5rem;
+  
+  @include mq(md) {
+    padding-block: 6.7rem 9rem;
+  }
+}
+
+.p-404__section-text {
+  text-align: center;
+}
+
+.p-404__section-text p {
+  font-size: 1.6rem;
+  line-height: calc(30 / 16);
+
+  @include mq(md) {
+    font-size: 1.8rem;
+    line-height: calc(30 / 18);
+  }
+}
+
+.p-404__section-button {
+  margin-top: .9rem;
+  
+  @include mq(md) {
+    margin-top: 4rem;
+  }
+}
+
+.p-404__section-button a {
+  margin-inline: auto;
+  display: block;
+  width: 100%;
+  font-size: 2rem;
+  line-height: calc(50 / 20);
+  color: $color-white;
+  font-weight: $font-bold;
+  background: $color-red;
+  text-align: center;
+
+  @include mq(md) {
+    font-size: 2.5rem;
+    line-height: calc(50 / 25);
+    width: 25rem;
+  }
+}

@@ -1,0 +1,42 @@
+@use "sass:map";
+@use '../../global' as *;
+
+// .p-top__buttons {
+.p-button-area {
+  z-index: 100;
+  position: fixed;
+  width: 100%;
+  // width: calc(100% - 2rem * 2);
+  padding-inline: 2rem;
+  // bottom: 30.3rem;
+  bottom: 0;
+
+  @include mq(md) {
+    width: 30rem;
+    padding-inline: 0;
+    // bottom: 27.5rem;
+    right: 0;
+  }
+}
+
+// .p-top__top-button {
+// bottom: 60px;
+// right: 60px;
+
+// }
+
+.p-button-area__arrow {
+  margin-bottom: 1.9rem;
+  
+  @include mq(md) {
+    margin-bottom: 3.1rem;
+  }
+}
+
+// .p-button-area__contact {
+//   margin-top: 1.9rem;
+
+//   @include mq(md) {
+//     margin-top: 3.1rem;
+//   }
+// }

@@ -1,13 +1,13 @@
-@use "../../global" as *;
-@use "sass:math";
+@use "sass:map";
+@use '../../global' as *;
 
 // 下層のfv
 .p-fv {
   position: relative;
-  padding-top: $header-height-sp;
+  // padding-top: $header-height-sp;
 
   @include mq(md) {
-    padding-top: hvw($header-height-pc);
+    // padding-top: hvw($header-height-pc);
   }
 }
 
@@ -27,7 +27,7 @@
 .p-fv__image img {
   aspect-ratio: 375 / 300;
   object-fit: cover;
-  
+
   @include mq(md) {
     aspect-ratio: 1080 / 200;
   }

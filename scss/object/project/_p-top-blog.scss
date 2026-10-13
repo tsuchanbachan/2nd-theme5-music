@@ -1,0 +1,58 @@
+@use "../../global" as *;
+@use "sass:math";
+
+.p-top-blog {
+  padding-top: 5rem;
+  padding-bottom: 19.1rem;
+
+  @include mq(md) {
+    padding-top: 7rem;
+    padding-bottom: 20.5rem;
+
+  }
+}
+.p-top-blog__contents {
+  margin-top: 3.9rem;
+
+  @include mq(md) {
+    // margin-top: 3.5rem;
+    margin-top: 3.8rem;
+  }
+}
+
+.p-top-blog__contents ul {
+  display: flex;
+  flex-direction: column;
+  row-gap: 4.1rem;
+
+  @include mq(md) {
+    flex-direction: row;
+    // column-gap: 5rem;
+    column-gap: calc(50 / 880 * 100%);
+    flex-wrap: wrap;
+  }
+}
+
+.p-top-blog__link {
+  text-align: center;
+  margin-top: 3.7rem;
+
+
+  @include mq(md) {
+    text-align: right;
+    
+  }
+}
+
+.p-top-blog__link a {
+  font-size: 1.8rem;
+  line-height: calc(30 / 18);
+  border-bottom: solid .1rem $color-main;
+  transition: opacity 0.4s;
+}
+
+.p-top-blog__link a:hover {
+  @media (any-hover: hover) {
+    opacity: 0.7;
+  }
+}

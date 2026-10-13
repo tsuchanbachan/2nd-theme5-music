@@ -2,7 +2,7 @@
 @use "sass:math";
 
 .c-section-title {
-margin-top: 50px;
+// margin-top: 50px;
 text-align: center;
 }
 
@@ -13,8 +13,8 @@ text-align: center;
   color: $color-main;
 
   @include mq(md) {
-    font-size: 3.5rem;
-    line-height: calc(50 / 35);
+    font-size: 3rem;
+    line-height: calc(50 / 30);
   }
 }
 
@@ -24,4 +24,11 @@ text-align: center;
 
 .c-section-title--white h2 {
   color: $color-white;
+}
+
+.c-section-title--big h2 {
+  @include mq(md) {
+    font-size: 3.5rem;
+    line-height: calc(50 / 35);
+  }
 }

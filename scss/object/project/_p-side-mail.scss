@@ -1,0 +1,16 @@
+@use "../../global" as *;
+@use "sass:math";
+
+.p-side-mail {
+  border-right: solid .05rem $color-main;
+  border-left: solid .05rem $color-main;
+  border-bottom: solid .05rem $color-main;
+  padding: 2rem;
+
+  @include mq(md) {
+    padding: 1.4rem;
+  }
+
+}
+
+.p-side-mail__img {}

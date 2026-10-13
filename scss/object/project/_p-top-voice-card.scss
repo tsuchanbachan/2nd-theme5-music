@@ -6,31 +6,67 @@
   width: 100%;    
   
   @include mq(md) {
-    width: calc(270 / 880 * 100%);
+    // sweiper側で設定
+    // width: calc(270 / 880 * 100%);
   }
 }
+
+// .p-top-voice-card:not(:first-of-type) {
+//   display: none;
+
+//   @include mq(md) {
+//     display: block;
+//   }
+// }
 
 .p-top-voice-card__media {}
 
 .p-top-voice-card__media img {
-  aspect-ratio: 270 / 190;
+  aspect-ratio: 335 / 200;
   object-fit: cover;
+  transition: transform .4s;
+
+  @include mq(md) {
+    aspect-ratio: 270 / 190;
+  }
 }
 
 .p-top-voice-card__body {
-  background-color: $color-red;
+  // background-color: $color-red;
   padding-top: 2.7rem;
+  transition: opacity .4s;
 
   @include mq(md) {
     padding-top: 1.7rem;
   }
 }
+
+.p-top-voice-card a:hover {
+  @media (any-hover: hover) {
+    .p-top-voice-card__media img {
+      transform: scale(1.1);
+    }
+
+    .p-top-voice-card__body {
+      opacity: .7;
+    }
+  }
+}
+
+
 .p-top-voice-card__body h3 {
   font-size: 2.2rem;
   line-height: calc(33 / 22);
   font-weight: $font-bold;
   color: $color-white;
   text-align: center;
+
+  @media (min-width:768px) {
+    font-size: 2rem;
+  }
+  @media (min-width:950px) {
+    font-size: 2.2rem;
+  }
 }
 
 .p-top-voice-card__body p {
@@ -43,4 +79,48 @@
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
   overflow: hidden;
+}
+
+
+
+// 前へ後ろへボタンの表示調整
+// カード外に表示させるためhtml上でswiperから出している
+.swiper-button-prev,
+.swiper-button-next {
+  width: 3rem;
+  height: 5rem;
+
+  position: absolute;
+  
+  transform: translateY(-50%);
+  @include mq(md) {
+    
+  }
+}
+
+.p-top-voice__contents .swiper-button-prev {
+
+  @include mq(md) {
+    left: -4rem;
+    
+  }
+}
+
+.p-top-voice__contents .swiper-button-next {
+  @include mq(md) {
+    right: -4rem;
+    
+  }
+}
+
+// デフォルトのアイコンの非表示
+.swiper-navigation-icon {
+  display: none;
+}
+
+// 追加したアイコンの表示
+.swiper-button-prev img,
+.swiper-button-next img {
+  width: 100%;
+  height: auto;
 }

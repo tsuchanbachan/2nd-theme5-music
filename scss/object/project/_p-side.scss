@@ -1,0 +1,30 @@
+@use "../../global" as *;
+@use "sass:math";
+
+.p-side {
+  display: flex;
+  flex-direction: column;
+  row-gap: 3rem;
+  padding-bottom: 19.7rem;
+}
+
+.p-side__item {}
+
+// サイドバーのタイトル
+.p-side__title {
+  background-color: $color-main;
+  width: 100%;
+  text-align: center;
+}
+
+.p-side__title p {
+  font-size: 1.8rem;
+  // line-height: calc(33 / 18);
+  line-height: calc(50 / 18);
+  font-weight: $font-bold;
+  color: $color-white;
+}
+
+.p-side__body {
+
+}

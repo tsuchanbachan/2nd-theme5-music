@@ -1,0 +1,123 @@
+@use "sass:map";
+@use '../../global' as *;
+
+
+// 関連記事
+.p-connection {}
+
+// 関連記事（実績詳細ページ分）
+.p-connection--result {
+  .p-connection__item {
+    column-gap: calc(20 / 335 * 100%);
+
+    @include mq(md) {
+      column-gap: calc(30 / 880 * 100%);
+    }
+  }
+
+  .p-connection__image {
+    width: calc(160 / 335 * 100%);
+
+    @include mq(md) {
+      width: calc(260 / 880 * 100%);
+    }
+  }
+
+  .p-connection__body p {
+    margin-top: 0;
+  }
+}
+
+// .p-blog-detail-article__connection-head {
+.p-connection__head {
+  height: 5rem;
+  background-color: $color-main;
+  color: $color-white;
+  text-align: center;
+  padding-inline: 3rem;
+
+  @include mq(md) {
+    text-align-last: left;
+  }
+}
+
+// .p-blog-detail-article__connection-head p {
+.p-connection__head p {
+  font-size: 1.8rem;
+  line-height: calc(50 / 18);
+}
+
+// .p-blog-detail-article__connection-contents {
+.p-connection__contents {
+  margin-top: 2.046rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 2.093rem;
+
+  @include mq(md) {
+    margin-top: 3rem;
+    row-gap: 3rem;
+  }
+}
+
+// .p-blog-detail-article__connection-item {
+.p-connection__item {
+  display: flex;
+  column-gap: calc(20 / 335 * 100%);
+
+  @include mq(md) {
+    column-gap: calc(30 / 600 * 100%);
+  }
+}
+
+
+
+// .p-blog-detail-article__connection-image {
+.p-connection__image {
+  width: calc(160 / 335 * 100%);
+
+  @include mq(md) {
+    width: calc(200 / 600 * 100%);
+  }
+}
+
+.p-connection__body {
+  flex: 1;
+}
+
+// .p-blog-detail-article__connection-body p {
+.p-connection__body p {
+  font-size: 1.7rem;
+  line-height: calc(28 / 17);
+  margin-top: .854rem;
+  font-weight: $font-bold;
+
+  @include mq(md) {
+    font-size: 2rem;
+    line-height: calc(25 / 20);
+    margin-top: 0;
+  }
+}
+
+// spは少ない、pcは表示
+// .p-blog-detail-article__connection-body span {
+.p-connection__body span {
+  display: none;
+
+  @include mq(md) {
+    display: inline;
+  }
+}
+
+// .p-blog-detail-article__connection-body time {
+.p-connection__body time {
+  display: block;
+  font-size: 1.7rem;
+  line-height: calc(30 / 17);
+  margin-top: 0.393rem;
+
+  @include mq(md) {
+    margin-top: 1.3rem;
+    margin-left: 0.4rem;
+  }
+}

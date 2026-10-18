@@ -13,4 +13,13 @@
 
 }
 
-.p-side-mail__img {}
+.p-side-mail__img {
+
+  transition: opacity .4s;
+
+  @media (any-hover: hover) {
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}

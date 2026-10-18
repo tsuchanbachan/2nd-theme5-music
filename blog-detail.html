@@ -13,7 +13,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
   <!-- favicon -->
-
+  <link rel="icon" href="./favicon/favicon.ico" sizes="any">
+  <link rel="icon" href="./favicon/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="./favicon/apple-touch-icon.png">
+  <!-- <link rel="manifest" href="./favicon/manifest.webmanifest"> -->
   <!-- css -->
   <link rel="stylesheet" href="./css/style.css">
 
@@ -27,16 +30,18 @@
       <div class="p-header__inner">
         <div class="p-header__logo">
           <a href="./index.html">
-            <div class="p-header__image"><img src="./image/logo-red.svg" alt="きたむらミュージックスクールのロゴ"></div>
-            <p class="p-header__company">
+            <span class="p-header__image">
+              <img src="./image/logo-red.svg" alt="きたむらミュージックスクールのロゴ">
+            </span>
+            <span class="p-header__company">
               <span>きたむら</span><br class="pc">ミュージックスクール
-            </p>
+            </span>
           </a>
         </div>
     
         <!-- SP用 -->
         <div class="p-header__sp sp">
-          <button id="js-hamburger" class="p-header__hamburger c-hamburger">
+          <button id="js-hamburger" class="p-header__hamburger c-hamburger" type="button">
             <span></span>
             <span></span>
             <span></span>
@@ -46,22 +51,21 @@
           <div class="p-header__menu">
             <nav>
               <ul>
-                <!-- <li><a href="#price">料金</a></li> -->
                 <li><a href="./page-price.html">料金</a></li>
-                <li><a href="#blog">ブログ</a></li>
-                <li><a href="#result">卒業実績</a></li>
+                <li><a href="./archive-blog.html">ブログ</a></li>
+                <li><a href="./archive-result.html">卒業実績</a></li>
               </ul>
             </nav>
           </div>
         </div>
-    
+        
         <!-- PC用ヘッダーメニュー -->
         <nav class="p-header__nav pc">
           <ul>
             <li class="p-header__nav-item"><a href="./page-price.html">料金</a></li>
-            <li class="p-header__nav-item"><a href="#blog">ブログ</a></li>
-            <li class="p-header__nav-item"><a href="#result">卒業実績</a></li>
-            <li class="p-header__nav-item-contact"><a href="#contact">お問い合わせ</a></li>
+            <li class="p-header__nav-item"><a href="./archive-blog.html">ブログ</a></li>
+            <li class="p-header__nav-item"><a href="./archive-result.html">卒業実績</a></li>
+            <li class="p-header__nav-item-contact"><a href="./page-contact.html">お問い合わせ</a></li>
           </ul>
         </nav>
     
@@ -96,7 +100,7 @@
               <div class="p-blog-detail-article__head-image c-label-image c-label-image--blog-detail">
                 <picture>
                   <source media="(min-width: 768px)" srcset="./image/archive-blog1-pc.jpg">
-                  <img src="./image/archive-blog1-sp.jpg" alt="">
+                  <img src="./image/archive-blog1-sp.jpg" alt="男性がギターを弾いている写真">
                 </picture>
                 <span>ギター</span>
               </div>
@@ -144,8 +148,8 @@
               </p>
               <div class="p-blog-detail-article__contents-image">
                 <picture>
-                  <source media="(min-width: 768px)" srcset="./image/blog-detail-sp.jpg">
-                  <img src="./image/blog-detail-sp.jpg" alt="">
+                  <source media="(min-width: 768px)" srcset="./image/blog-detail-pc.jpg">
+                  <img src="./image/blog-detail-sp.jpg" alt="男性がピアノの前に座っている写真">
                 </picture>
               </div>
               <ul>
@@ -167,29 +171,30 @@
             </div>
 
             <!-- ページネーション -->
-            <div class="p-blog-detail-article__pagination">
-              <a href="#" class="p-blog-detail-article__pagination-item">
-                <div class="p-blog-detail-article__pagination-head p-blog-detail-article__pagination-before">
+            <div class="p-blog-detail-article__pagination p-pagination p-pagination--blog">
+              <!-- <a href="#" class="p-blog-detail-article__pagination-item"> -->
+              <a href="#" class="p-pagination__item">
+                <div class="p-pagination__head p-pagination-before">
                   <p>◀︎ 前の記事</p>
                 </div>
-                <div class="p-blog-detail-article__pagination-body">
-                  <div class="p-blog-detail-article__pagination-image pc">
-                    <img src="./image/blog-kanren-pc.jpg" alt="">
+                <div class="p-pagination__body">
+                  <div class="p-pagination__image pc">
+                    <img src="./image/blog-kanren-pc.jpg" alt="女性が拳を突き上げる動作１">
                   </div>
-                  <div class="p-blog-detail-article__pagination-text">
+                  <div class="p-pagination__text">
                     <p>タイトルが入ります。タイトルが入ります。タイトルが入</p>
                   </div>
                 </div>
               </a>
-              <a href="#" class="p-blog-detail-article__pagination-item">
-                <div class="p-blog-detail-article__pagination-head p-blog-detail-article__pagination-after">
+              <a href="#" class="p-pagination__item">
+                <div class="p-pagination__head p-pagination-after">
                   <p>次の記事 ▶︎</p>
                 </div>
-                <div class="p-blog-detail-article__pagination-body">
-                  <div class="p-blog-detail-article__pagination-image pc">
-                    <img src="./image/blog-kanren-pc.jpg" alt="">
+                <div class="p-pagination__body">
+                  <div class="p-pagination__image pc">
+                    <img src="./image/blog-kanren-pc.jpg" alt="女性が拳を突き上げる動作2">
                   </div>
-                  <div class="p-blog-detail-article__pagination-text">
+                  <div class="p-pagination__text">
                     <p>タイトルが入ります。タイトルが入ります。タイトルが入</p>
                   </div>
                 </div>
@@ -198,63 +203,54 @@
           </section>
 
           <!-- 関連記事 -->
-          <div class="p-blog-detail__connection">
-            <div class="p-blog-detail-article__connection-head">
+          <div class="p-blog-detail__connection  p-connection p-connection--blog">
+            <div class="p-connection__head">
               <p>関連記事</p>
             </div>
 
-            <div class="p-blog-detail-article__connection-contents">
+            <div class="p-connection__contents">
               <!-- 1つ目 -->
-              <a href="#" class="p-blog-detail-article__connection-item">
+              <a href="#" class="p-connection__item">
 
-                <div class="p-blog-detail-article__connection-image c-label-image c-label-image--blog-connection">
-                  <!-- <img src="./image/blog-kanren-pc.jpg" alt=""> -->
-                  <img src="./image/hamburger00.png" alt="">
+                <div class="p-connection__image c-label-image c-label-image--blog-connection">
+                  <img src="./image/blog-kanren-pc.jpg" alt="関連記事写真１">
                   <span>ギター</span>
                 </div>
 
-                <div class="p-blog-detail-article__connection-body">
-                  <!-- <p class="js-blog-detail-article-limited">タイトルが入ります。タイトルが入ります。タイトルが入</p> -->
+                <div class="p-connection__body">
                   <p>タイトルが入ります。タイトル<span>が入ります。タイトルが入ります。</span></p>
                   <time datetime="0000-00-00">0000.00.00</time>
                 </div>
-
               </a>
               <!-- 2つ目 -->
-              <a href="#" class="p-blog-detail-article__connection-item">
-  
-                <div class="p-blog-detail-article__connection-image c-label-image c-label-image--blog-connection">
-                  <img src="./image/blog-kanren-pc.jpg" alt="">
+              <a href="#" class="p-connection__item">
+
+                <div class="p-connection__image c-label-image c-label-image--blog-connection">
+                  <img src="./image/blog-kanren-pc.jpg" alt="関連記事写真２">
                   <span>ギター</span>
                 </div>
-  
-                <div class="p-blog-detail-article__connection-body">
+
+                <div class="p-connection__body">
                   <p>タイトルが入ります。タイトル<span>が入ります。タイトルが入ります。</span></p>
                   <time datetime="0000-00-00">0000.00.00</time>
                 </div>
-              </a>            
+              </a>
               <!-- 3つ目 -->
-              <a href="#" class="p-blog-detail-article__connection-item">
-  
-                <div class="p-blog-detail-article__connection-image c-label-image c-label-image--blog-connection">
-                  <img src="./image/blog-kanren-pc.jpg" alt="">
+              <a href="#" class="p-connection__item">
+
+                <div class="p-connection__image c-label-image c-label-image--blog-connection">
+                  <img src="./image/blog-kanren-pc.jpg" alt="関連記事写真３">
                   <span>ギター</span>
                 </div>
-  
-                <div class="p-blog-detail-article__connection-body">
+
+                <div class="p-connection__body">
                   <p>タイトルが入ります。タイトル<span>が入ります。タイトルが入ります。</span></p>
                   <time datetime="0000-00-00">0000.00.00</time>
                 </div>
-  
               </a>
 
             </div>
-
-
           </div>
-
-
-
         </div>
 
         <!-- サイドバー -->
@@ -262,14 +258,13 @@
 
           <!-- メルマガ -->
           <div class="p-side__item">
-            <!-- <div class="p-side__title c-side-title"> -->
             <div class="p-side__title">
               <p>無料メールマガジン</p>
             </div>
             <div class="p-side__body p-side-mail">
-              <div class="p-side-mail__img">
+              <a href="" class="p-side-mail__img">
                 <img src="./image/square-mail.jpg" alt="バナー広告">
-              </div>
+              </a>
             </div>
           </div>
 
@@ -281,7 +276,7 @@
             <div class="p-side__body p-side-search">
               <form action="http://www.google.co.jp/search" method="get">
                 <input type="text" name="search">
-                <button type="submit"><img src="./image/icon-search.svg" alt=""></button>
+                <button type="submit"><img src="./image/icon-search.svg" alt="ルーペのアイコン"></button>
               </form>
             </div>
           </div>
@@ -296,7 +291,7 @@
                 <li>
                   <a href="#">
                     <div class="p-side-recommend__image">
-                      <img src="./image/square-recommend.jpg" alt="">
+                      <img src="./image/square-recommend.jpg" alt="おすすめ記事写真1">
                     </div>
                     <div class="p-side-recommend__text">
                       <p>タイトルが入ります。タイトル</p>
@@ -306,7 +301,7 @@
                 <li>
                   <a href="#">
                     <div class="p-side-recommend__image">
-                      <img src="./image/square-recommend.jpg" alt="">
+                      <img src="./image/square-recommend.jpg" alt="おすすめ記事写真2">
                     </div>
                     <div class="p-side-recommend__text">
                       <p>タイトルが入ります。タイトル</p>
@@ -316,7 +311,7 @@
                 <li>
                   <a href="#">
                     <div class="p-side-recommend__image">
-                      <img src="./image/square-recommend.jpg" alt="">
+                      <img src="./image/square-recommend.jpg" alt="おすすめ記事写真3">
                     </div>
                     <div class="p-side-recommend__text">
                       <p>タイトルが入ります。タイトル</p>
@@ -358,7 +353,7 @@
       
         <!-- お問い合わせボタン -->
         <div class="p-button-area__contact c-button">
-          <a href="#">お問い合わせ</a>
+          <a href="./page-contact.html">お問い合わせ</a>
         </div>
       
       </div>
@@ -372,11 +367,12 @@
             <ul>
               <li><a href="./index.html">ホーム</a></li>
               <li><a href="./page-price.html">料金</a></li>
-              <li><a href="#blog">ブログ</a></li>
-              <li><a href="#result">卒業実績</a></li>
+              <li><a href="./archive-blog.html">ブログ</a></li>
+              <li><a href="./archive-result.html">卒業実績</a></li>
             </ul>
           </nav>
-          <div class="p-footer__company"><a href="#"><img src="./image/logo-white.svg" alt="きたむらミュージックスクールのロゴ"></a></div>
+          <div class="p-footer__company"><a href="./index.html"><img src="./image/logo-white.svg" alt="きたむらミュージックスクールのロゴ"></a>
+          </div>
         </div>
 
         <div class="p-footer__copyright">

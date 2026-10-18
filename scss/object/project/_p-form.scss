@@ -21,8 +21,7 @@ $textarea-height-pc: 300px;
 // 各種要素
 [type="text"],
 [type="email"],
-select,
-textarea {
+select {
   // ↓リセットCSS
   border: none;
   border-radius: 0;
@@ -44,18 +43,43 @@ textarea {
   }
 }
 
+// テキストエリア
+textarea {
+  // ↓リセットCSS
+  border: none;
+  border-radius: 0;
+  background-image: none;
+  font-family: inherit;
+
+  // ↓カスタム
+  font-size: 1.5rem;
+  line-height: calc(25 / 15);
+  padding: 1.2rem 2rem;
+  width: 100%;
+  background: #fff;
+  border: solid 0.5px $color-main;
+
+  height: $textarea-height-sp;
+  width: 100%;
+  // 謎の余白防止
+  display: block;
+  // word-break: keep-all;
+  // 日本語を自然に改行、URLや長い英単語だけはちゃんと折り返す
+  word-break: keep-all;
+  overflow-wrap: break-word;
+
+  @include mq(md) {
+    height: $textarea-height-pc;
+    line-height: calc(33 / 15);
+  }
+}
+
 // プレースホルダーのスタイル
 input::placeholder,
 textarea::placeholder {
   color: #B2B2B2;
   font-size: 1.5rem;
-  line-height: calc(25 / 15);
-
-  @include mq(md) {
-    line-height: calc(33 / 15);
-  }
 }
-
 
 // チェックボックス
 [type="checkbox"] {
@@ -70,24 +94,20 @@ textarea::placeholder {
     font-size: $check-fz;
     line-height: calc(30 / 16);
     cursor: pointer;
-    // width: calc(20px + 20px + 126px + 34px);
 
     @include mq(md) {
       padding-left: calc($check-size + $check-space-pc);
 
       font-size: 1.8rem;
       line-height: calc(30 / 18);
-      // line-height: calc(20 / 18);
     }
 
     // 箱
     &::before {
       position: absolute;
       content: "";
-      // top: 50%;
       top: .3rem;
       left: 0;
-      // transform: translateY(-50%);
       background: $check-bg-cr;
       border: 0.5px solid $color-main;
       width: $check-size;
@@ -119,22 +139,6 @@ textarea::placeholder {
   }
 }
 
-// テキストエリア
-textarea {
-  height: $textarea-height-sp;
-  width: 100%;
-  // 謎の余白防止
-  display: block;
-  // word-break: keep-all;
-  // 日本語を自然に改行、URLや長い英単語だけはちゃんと折り返す
-  word-break: keep-all;
-  overflow-wrap: break-word;
-
-  @include mq(md) {
-    height: $textarea-height-pc;
-  }
-}
-
 // ボタン
 [type="submit"] {
   // ↓リセットCSS
@@ -163,13 +167,15 @@ textarea {
   @include mq(md) {
     width: 250px;
     max-width: 100%;
+
+    font-size: 2.5rem;
   }
 
   // ホバー時反転
   @media (any-hover: hover) {
     &:hover {
-      background: $color-red;
-      color: $color-white;
+      background: $color-white;
+      color: $color-red;
     }
   }
 }
@@ -217,7 +223,6 @@ textarea {
   @include mq(md) {
     // 「目的」のマイナスmarginするためにrow-gapを調整
     margin-top: .7rem;
-    
   }
 }
 
@@ -240,6 +245,7 @@ textarea {
 
   .p-form__label {
     line-height: 1;
+    padding-bottom: .9rem;
 
     label {
       line-height: 1;
@@ -252,21 +258,11 @@ textarea {
     @include mq(md) {
       margin-top: 0;
     }
-
-    textarea::placeholder {
-      padding-top: 1.2rem;
-  
-      @include mq(md) {
-        padding-top: .3rem;
-      }
-    }
   }
 }
 
 .p-form__item-text {
   .p-form__input {
-
-
 
   }
 }
@@ -288,7 +284,6 @@ textarea {
       line-height: calc(33 / 20);
     }
   }
-
 }
 
 .p-form__input {
@@ -303,8 +298,6 @@ textarea {
   row-gap: 0.85rem;
   
   @include mq(md) {
-    // column-gap: 16px;
-    // row-gap: 5px;
     row-gap: 1rem;
   }
 }

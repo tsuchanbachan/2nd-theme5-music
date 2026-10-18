@@ -25,6 +25,9 @@
   @include mq(md) {
     padding-top: 7.7rem;
     padding-bottom: 0;
+
+    // PC時にはスクロールを解除
+    overflow-x: visible;
   }
 }
 .p-page-price-price__table table {
@@ -52,12 +55,12 @@
 }
 
 .p-page-price-price__table tbody {
-  border-top: .05rem solid black;
-  border-bottom: .05rem solid black;
+  border-top: .5px solid black;
+  border-bottom: .5px solid black;
 }
 
 .p-page-price-price__table td {
-  border-left: .05rem solid black;
+  border-left: .5px solid black;
 }
 
 .p-page-price-price__table tbody tr:nth-child(even) {
@@ -143,12 +146,10 @@
   @include mq(md) {
     height: 5rem;
   }
-
 }
 
 .p-page-price-price__table table tbody tr {
   height: 8.5rem;
-
 }
 
 // ２段行
@@ -171,7 +172,6 @@
   margin-inline: auto;
 
   background-color: $color-main;
-
 }
 
 // スタンダードプランの強調

@@ -8,14 +8,18 @@
 .p-blog-detail__bread {}
 
 .p-blog-detail__column {
-  margin-top: 5rem;
+  margin-top: 5.4rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 3rem;
+  margin-bottom: 19.7rem;
 
   @include mq(md) {
-    display: flex;
+    flex-direction: row;
     column-gap: calc(30 / 880 * 100%);
 
     margin-top: 7rem;
-    
+    margin-bottom: 18.7rem;
   }
 }
 
@@ -36,12 +40,10 @@
 }
 
 .p-blog-detail__column-side {
-  margin-top: 3.01rem;
+  // margin-top: 3.01rem;
 
   @include mq(md) {
     width: calc(250 / 880 * 100%);
-    margin-top: 0;
+    // margin-top: 0;
   }
 }
-
-

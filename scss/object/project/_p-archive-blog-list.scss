@@ -16,11 +16,12 @@
   display: flex;
   justify-content: space-between;
 }
+.p-archive-blog-list__search-result h1,
 .p-archive-blog-list__search-result p {
   font-size: 1.8rem;
   line-height: calc(30 / 18);
 }
-.p-archive-blog-list__search-result p span {
+.p-archive-blog-list__search-result h1 span {
   font-weight: $font-bold;
 }
 .p-archive-blog-list__contents {
@@ -45,11 +46,18 @@
 .p-archive-blog-list__article {}
 
 .p-archive-blog-list__article a {
+  transition: opacity .4s;
+
   @include mq(md) {
     display: flex;
     column-gap: calc(50 / 880 * 100%);
   }
 
+  @media (any-hover: hover) {
+    &:hover {
+      opacity: 0.7;
+    }
+  }
 }
 
 .p-archive-blog-list__media {
@@ -67,7 +75,8 @@
   }
 }
 
-.p-archive-blog-list__body h3 {
+.p-archive-blog-list__body h3,
+.p-archive-blog-list__body-search-title {
   font-size: 2rem;
   font-weight: $font-bold;
   line-height: calc(30 / 20);
@@ -97,10 +106,18 @@
   line-height: calc(30 / 16);
   margin-top: 0.8rem;
 
+  // 指定行数を超えた場合に省略
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
+  overflow: hidden;
+
   @include mq(md) {
     font-size: 1.8rem;
     line-height: calc(30 / 18);
     margin-top: 1.1rem;
+    
+    -webkit-line-clamp: 3;
   }
 }
 

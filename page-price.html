@@ -13,7 +13,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
   <!-- favicon -->
-
+  <link rel="icon" href="./favicon/favicon.ico" sizes="any">
+  <link rel="icon" href="./favicon/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="./favicon/apple-touch-icon.png">
+  <!-- <link rel="manifest" href="./favicon/manifest.webmanifest"> -->
   <!-- css -->
   <link rel="stylesheet" href="./css/style.css">
 
@@ -23,21 +26,22 @@
   <div id="container">
 
     <!-- ヘッダー -->
-    <!-- ヘッダー -->
     <header class="p-header">
       <div class="p-header__inner">
         <div class="p-header__logo">
           <a href="./index.html">
-            <div class="p-header__image"><img src="./image/logo-red.svg" alt="きたむらミュージックスクールのロゴ"></div>
-            <p class="p-header__company">
+            <span class="p-header__image">
+              <img src="./image/logo-red.svg" alt="きたむらミュージックスクールのロゴ">
+            </span>
+            <span class="p-header__company">
               <span>きたむら</span><br class="pc">ミュージックスクール
-            </p>
+            </span>
           </a>
         </div>
     
         <!-- SP用 -->
         <div class="p-header__sp sp">
-          <button id="js-hamburger" class="p-header__hamburger c-hamburger">
+          <button id="js-hamburger" class="p-header__hamburger c-hamburger" type="button">
             <span></span>
             <span></span>
             <span></span>
@@ -47,22 +51,21 @@
           <div class="p-header__menu">
             <nav>
               <ul>
-                <!-- <li><a href="#price">料金</a></li> -->
                 <li><a href="./page-price.html">料金</a></li>
-                <li><a href="#blog">ブログ</a></li>
-                <li><a href="#result">卒業実績</a></li>
+                <li><a href="./archive-blog.html">ブログ</a></li>
+                <li><a href="./archive-result.html">卒業実績</a></li>
               </ul>
             </nav>
           </div>
         </div>
-    
+          
         <!-- PC用ヘッダーメニュー -->
         <nav class="p-header__nav pc">
           <ul>
             <li class="p-header__nav-item"><a href="./page-price.html">料金</a></li>
-            <li class="p-header__nav-item"><a href="#blog">ブログ</a></li>
-            <li class="p-header__nav-item"><a href="#result">卒業実績</a></li>
-            <li class="p-header__nav-item-contact"><a href="#contact">お問い合わせ</a></li>
+            <li class="p-header__nav-item"><a href="./archive-blog.html">ブログ</a></li>
+            <li class="p-header__nav-item"><a href="./archive-result.html">卒業実績</a></li>
+            <li class="p-header__nav-item-contact"><a href="./page-contact.html">お問い合わせ</a></li>
           </ul>
         </nav>
     
@@ -98,7 +101,7 @@
       </div>
 
       <!-- 料金体系 -->
-      <section id="" class="p-page-price__system p-page-price-system">
+      <section class="p-page-price__system p-page-price-system">
         <div class="l-inner">
 
           <!-- セクションタイトル -->
@@ -120,7 +123,7 @@
       </section>
 
       <!-- プラン内容・月額料金 -->
-      <section id="" class="p-page-price__price p-page-price-price">
+      <section class="p-page-price__price p-page-price-price">
         <div class="l-inner">
 
           <!-- セクションタイトル -->
@@ -283,7 +286,7 @@
       
         <!-- お問い合わせボタン -->
         <div class="p-button-area__contact c-button">
-          <a href="#">お問い合わせ</a>
+          <a href="./page-contact.html">お問い合わせ</a>
         </div>
       
       </div>
@@ -297,11 +300,12 @@
             <ul>
               <li><a href="./index.html">ホーム</a></li>
               <li><a href="./page-price.html">料金</a></li>
-              <li><a href="#blog">ブログ</a></li>
-              <li><a href="#result">卒業実績</a></li>
+              <li><a href="./archive-blog.html">ブログ</a></li>
+              <li><a href="./archive-result.html">卒業実績</a></li>
             </ul>
           </nav>
-          <div class="p-footer__company"><a href="#"><img src="./image/logo-white.svg" alt="きたむらミュージックスクールのロゴ"></a></div>
+          <div class="p-footer__company"><a href="./index.html"><img src="./image/logo-white.svg" alt="きたむらミュージックスクールのロゴ"></a>
+          </div>
         </div>
 
         <div class="p-footer__copyright">

@@ -22,9 +22,16 @@
 .p-side-recommend a {
   display: flex;
   column-gap: calc(20 / 335 * 100%);
+  transition: opacity .4s;
 
   @include mq(md) {
     column-gap: calc(15 / 250 * 100%);
+  }
+
+  @media (any-hover: hover) {
+    &:hover {
+      opacity: 0.7;
+    }
   }
 }
 
@@ -53,6 +60,12 @@
   font-size: 1.7rem;
   line-height: calc(28 / 17);
   margin-top: 0.854rem;
+
+  // 指定行数を超えた場合に省略
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
 
   @include mq(md) {
     margin-top: 0;

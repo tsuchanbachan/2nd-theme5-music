@@ -60,11 +60,10 @@
     gap: 1rem
   }
 
-}
-
-.p-header__logo a:hover {
   @media (any-hover: hover) {
-    opacity: 0.7;
+    &:hover {
+      opacity: 0.7;
+    }
   }
 }
 
@@ -82,15 +81,11 @@
 }
 
 .p-header__company {
-  // font-size: 1.3rem;
-  // font-size: calc(13 / 375 * 100vw);
   font-size: calc(13 / 375 * 100vw);
   line-height: calc(14 / 13);
   font-weight: $font-bold;
 
   @include mq(md) {
-    // font-size: 1.5rem;
-    // font-size: calc(15 / 1080 * 100vw);
     font-size: hvw(15);
     line-height: calc(23 / 15);
   }

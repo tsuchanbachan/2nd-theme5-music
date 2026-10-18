@@ -7,6 +7,7 @@
 
 // 関連記事（実績詳細ページ分）
 .p-connection--result {
+
   .p-connection__item {
     column-gap: calc(20 / 335 * 100%);
 
@@ -28,7 +29,6 @@
   }
 }
 
-// .p-blog-detail-article__connection-head {
 .p-connection__head {
   height: 5rem;
   background-color: $color-main;
@@ -41,13 +41,11 @@
   }
 }
 
-// .p-blog-detail-article__connection-head p {
 .p-connection__head p {
   font-size: 1.8rem;
   line-height: calc(50 / 18);
 }
 
-// .p-blog-detail-article__connection-contents {
 .p-connection__contents {
   margin-top: 2.046rem;
   display: flex;
@@ -60,19 +58,22 @@
   }
 }
 
-// .p-blog-detail-article__connection-item {
 .p-connection__item {
   display: flex;
   column-gap: calc(20 / 335 * 100%);
+  transition: opacity .4s;
 
   @include mq(md) {
     column-gap: calc(30 / 600 * 100%);
   }
+
+  @media (any-hover: hover) {
+    &:hover {
+      opacity: 0.7;
+    }
+  }
 }
 
-
-
-// .p-blog-detail-article__connection-image {
 .p-connection__image {
   width: calc(160 / 335 * 100%);
 
@@ -85,12 +86,17 @@
   flex: 1;
 }
 
-// .p-blog-detail-article__connection-body p {
 .p-connection__body p {
   font-size: 1.7rem;
   line-height: calc(28 / 17);
   margin-top: .854rem;
   font-weight: $font-bold;
+
+  // 指定行数を超えた場合に省略
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
 
   @include mq(md) {
     font-size: 2rem;
@@ -100,7 +106,6 @@
 }
 
 // spは少ない、pcは表示
-// .p-blog-detail-article__connection-body span {
 .p-connection__body span {
   display: none;
 
@@ -109,7 +114,6 @@
   }
 }
 
-// .p-blog-detail-article__connection-body time {
 .p-connection__body time {
   display: block;
   font-size: 1.7rem;

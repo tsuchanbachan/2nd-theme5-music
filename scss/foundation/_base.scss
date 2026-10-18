@@ -11,6 +11,7 @@ html {
   scroll-behavior: smooth;
 
   font-size: calc(10 / 375 * 100vw);
+  
   @media (min-width: 375px) {
     font-size: 10px;
   }
@@ -42,7 +43,8 @@ main {
   padding-top: $header-height-sp;
 
   @include mq(md) {
-    padding-top: hvw($header-height-pc);
+    // padding-top: hvw($header-height-pc);
+    padding-top: $header-height-pc;
   }
 }
 

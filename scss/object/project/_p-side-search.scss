@@ -32,6 +32,9 @@
   height: 5.4rem;
   padding: 0 1.5rem;
   background-color: #E8E8E8;
+  // .p-formでのborder指定の上書き
+  border: none;
+
 
   @include mq(md) {
     height: 4rem;

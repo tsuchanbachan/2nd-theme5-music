@@ -42,7 +42,7 @@
 
 .p-blog-detail-article__head-sns {
   display: flex;
-  flex-wrap: no-wrap;
+  flex-wrap: nowrap;
   column-gap: calc(3 / 335 * 100%);
   margin-top: 2.1rem;
   
@@ -228,6 +228,14 @@
   color: $color-red;
   // border-bottom: solid .1rem $color-red;
   position: relative;
+
+  transition: opacity .4s;
+
+  @media (any-hover: hover) {
+    &:hover {
+      opacity: 0.7;
+    }
+  }
 }
 .p-blog-detail-article__contents cite a::after {
   content: '';

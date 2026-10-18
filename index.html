@@ -13,7 +13,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
   <!-- favicon -->
-
+  <link rel="icon" href="./favicon/favicon.ico" sizes="any">
+  <link rel="icon" href="./favicon/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="./favicon/apple-touch-icon.png">
+  <!-- <link rel="manifest" href="./favicon/manifest.webmanifest"> -->
   <!-- css -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
   <link rel="stylesheet" href="./css/style.css">
@@ -28,16 +31,18 @@
       <div class="p-header__inner">
         <h1 class="p-header__logo">
           <a href="./index.html">
-            <div class="p-header__image"><img src="./image/logo-red.svg" alt="きたむらミュージックスクールのロゴ"></div>
-            <p class="p-header__company">
+            <span class="p-header__image">
+              <img src="./image/logo-red.svg" alt="きたむらミュージックスクールのロゴ">
+            </span>
+            <span class="p-header__company">
               <span>きたむら</span><br class="pc">ミュージックスクール
-            </p>
+            </span>
           </a>
         </h1>
 
         <!-- SP用 -->
         <div class="p-header__sp sp">
-          <button id="js-hamburger" class="p-header__hamburger c-hamburger">
+          <button id="js-hamburger" class="p-header__hamburger c-hamburger" type="button">
             <span></span>
             <span></span>
             <span></span>
@@ -47,10 +52,9 @@
           <div class="p-header__menu">
             <nav>
               <ul>
-                <!-- <li><a href="#price">料金</a></li> -->
                 <li><a href="./page-price.html">料金</a></li>
-                <li><a href="#blog">ブログ</a></li>
-                <li><a href="#result">卒業実績</a></li>
+                <li><a href="./archive-blog.html">ブログ</a></li>
+                <li><a href="./archive-result.html">卒業実績</a></li>
               </ul>
             </nav>
           </div>
@@ -60,9 +64,9 @@
         <nav class="p-header__nav pc">
           <ul>
             <li class="p-header__nav-item"><a href="./page-price.html">料金</a></li>
-            <li class="p-header__nav-item"><a href="#blog">ブログ</a></li>
-            <li class="p-header__nav-item"><a href="#result">卒業実績</a></li>
-            <li class="p-header__nav-item-contact"><a href="#contact">お問い合わせ</a></li>
+            <li class="p-header__nav-item"><a href="./archive-blog.html">ブログ</a></li>
+            <li class="p-header__nav-item"><a href="./archive-result.html">卒業実績</a></li>
+            <li class="p-header__nav-item-contact"><a href="./page-contact.html">お問い合わせ</a></li>
           </ul>
         </nav>
 
@@ -112,10 +116,6 @@
               <div class="p-top-dream__step">
                 <!-- <p class="p-top-flow-plan__english">enthusiasm</p> -->
                 <p class="p-top-dream__english">enthusiasm</p>
-                <!-- <div class="p-top-flow-plan__design c-flow">
-                  <span class="p-top-flow-plan__span p-top-flow-plan__design--up-goal"></span>
-                </div> -->
-                <!-- <p class="p-top-flow-plan__japanese">熱狂し</p> -->
                 <p class="p-top-dream__japanese">熱狂し</p>
               </div>
 
@@ -256,7 +256,7 @@
                     <div class="p-top-voice-card__media">
                       <picture>
                         <source media="(min-width: 768px)" srcset="./image/voice2-pc.jpg">
-                        <img src="./image/voice2-sp.jpg" alt="生徒の声１">
+                        <img src="./image/voice2-sp.jpg" alt="生徒の声2">
                       </picture>
                     </div>
                     <div class="p-top-voice-card__body">
@@ -271,7 +271,7 @@
                     <div class="p-top-voice-card__media">
                       <picture>
                         <source media="(min-width: 768px)" srcset="./image/voice3-pc.jpg">
-                        <img src="./image/voice3-sp.jpg" alt="生徒の声１">
+                        <img src="./image/voice3-sp.jpg" alt="生徒の声3">
                       </picture>
                     </div>
                     <div class="p-top-voice-card__body">
@@ -280,13 +280,13 @@
                     </div>
                   </a>
                 </li>
-                <!-- 生徒の声カード1 -->
+                <!-- 生徒の声カード4 -->
                 <li class="p-top-voice-card swiper-slide">
                   <a href="#">
                     <div class="p-top-voice-card__media">
                       <picture>
                         <source media="(min-width: 768px)" srcset="./image/voice1-pc.jpg">
-                        <img src="./image/voice1-sp.jpg" alt="生徒の声１">
+                        <img src="./image/voice1-sp.jpg" alt="生徒の声3">
                       </picture>
                     </div>
                     <div class="p-top-voice-card__body">
@@ -295,13 +295,13 @@
                     </div>
                   </a>
                 </li>
-                <!-- 生徒の声カード2 -->
+                <!-- 生徒の声カード5 -->
                 <li class="p-top-voice-card swiper-slide">
                   <a href="#">
                     <div class="p-top-voice-card__media">
                       <picture>
                         <source media="(min-width: 768px)" srcset="./image/voice2-pc.jpg">
-                        <img src="./image/voice2-sp.jpg" alt="生徒の声１">
+                        <img src="./image/voice2-sp.jpg" alt="生徒の声5">
                       </picture>
                     </div>
                     <div class="p-top-voice-card__body">
@@ -310,13 +310,13 @@
                     </div>
                   </a>
                 </li>
-                <!-- 生徒の声カード3 -->
+                <!-- 生徒の声カード6 -->
                 <li class="p-top-voice-card swiper-slide">
                   <a href="#">
                     <div class="p-top-voice-card__media">
                       <picture>
                         <source media="(min-width: 768px)" srcset="./image/voice3-pc.jpg">
-                        <img src="./image/voice3-sp.jpg" alt="生徒の声１">
+                        <img src="./image/voice3-sp.jpg" alt="生徒の声6">
                       </picture>
                     </div>
                     <div class="p-top-voice-card__body">
@@ -330,8 +330,8 @@
             </div>
 
             <!-- 前後の矢印 -->
-            <div class="swiper-button-prev"><img src="./image/top-voice-arrows-left.svg" alt=""></div>
-            <div class="swiper-button-next"><img src="./image/top-voice-arrows-right.svg" alt=""></div>
+            <div class="swiper-button-prev"><img src="./image/top-voice-arrows-left.svg" alt="左向きの矢印"></div>
+            <div class="swiper-button-next"><img src="./image/top-voice-arrows-right.svg" alt="右向きの矢印"></div>
           </div>
 
         </div>
@@ -526,7 +526,7 @@
               </li>
             </ul>
             <div class="p-top-blog__link">
-              <a href="#">ブログ一覧へ</a>
+              <a href="./archive-blog.html">ブログ一覧へ</a>
             </div>
           </div>
         </div>
@@ -537,20 +537,19 @@
       <div class="p-top__buttons p-button-area" id="buttons">
 
           <!-- To Topボタン -->
-          <a href="#" class="c-to-top-arrow">
+          <a href="#" class="p-button-area__arrow c-to-top-arrow">
             <span></span>
           </a>
         
         <!-- お問い合わせボタン -->
         <div class="p-button-area__contact c-button">
-          <a href="#">お問い合わせ</a>
+          <a href="./page-contact.html">お問い合わせ</a>
         </div>
 
       </div>
 
     
     </main>
-
 
     <footer class="p-footer">
       <div class="p-footer__inner l-inner">
@@ -559,11 +558,12 @@
             <ul>
               <li><a href="./index.html">ホーム</a></li>
               <li><a href="./page-price.html">料金</a></li>
-              <li><a href="#blog">ブログ</a></li>
-              <li><a href="#result">卒業実績</a></li>
+              <li><a href="./archive-blog.html">ブログ</a></li>
+              <li><a href="./archive-result.html">卒業実績</a></li>
             </ul>
           </nav>
-          <div class="p-footer__company"><a href="#"><img src="./image/logo-white.svg" alt="きたむらミュージックスクールのロゴ"></a></div>
+          <div class="p-footer__company"><a href="./index.html"><img src="./image/logo-white.svg" alt="きたむらミュージックスクールのロゴ"></a>
+          </div>
         </div>
         
         <div class="p-footer__copyright">

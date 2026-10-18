@@ -9,6 +9,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: opacity .4s, transform .4s;
 
   @include mq(md) {
     color: $color-white;
@@ -18,6 +19,12 @@
 
     // gap？左右padding？どっちつかず
     column-gap: .8rem;
+  }
+
+  @media (any-hover: hover) {
+    &:hover {
+      opacity: 0.7;
+    }
   }
 }
 

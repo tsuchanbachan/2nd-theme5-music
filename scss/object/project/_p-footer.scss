@@ -28,6 +28,15 @@
     margin-top: 2.1rem;
   }
 }
+.p-footer__company a {
+  transition: opacity .4s;
+
+  @media (any-hover: hover) {
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}
 
 .p-footer__company img {
   aspect-ratio: 32 / 49;
@@ -40,11 +49,12 @@
   line-height: calc(33 / 17);
   display: block;
   transition: opacity .4s;
-}
-  
-.p-footer__nav a:hover {
+
   @media (any-hover: hover) {
-    opacity: 0.7;
+    &:hover {
+      opacity: 0.7;
+
+    }
   }
 }
 
@@ -89,6 +99,14 @@
 
 .sns__link {
   display: block;
+
+  transition: opacity .4s;
+
+  @media (any-hover: hover) {
+    &:hover {
+      opacity: 0.7;
+    }
+  }
 }
 .sns__link.fb,
 .sns__link.x,

@@ -84,12 +84,13 @@
   top: 0;
   left: 50%;
   // transralteXはピクパで調整
-  transform: translateX(-1rem) rotate(45deg);
+  // transform: translateX(-1rem) rotate(45deg);
+  transform: translateX(-.9rem) rotate(45deg);
 
 
-  // @include mq(md) {
-  //   transform: translateX(14%) rotate(45deg);
-  // }
+  @include mq(md) {
+    transform: translateX(-0.93rem) rotate(45deg);
+  }
 }
 
 
@@ -157,10 +158,17 @@
   background-color: $color-red;
   // ピクパで調整？（丸から突き抜ける予防）
   // bottom: 0;
+  // bottom: 0.1rem;
   bottom: 0.1rem;
+
   // tagsで調整？
   // left: calc(1rem - .15rem);
   left: 0.9rem;
+
+  @include mq(md) {
+    bottom: 0.3rem;
+    left: 0.9rem;
+  }
 }
 
 // 赤い縦線：1つ目の上

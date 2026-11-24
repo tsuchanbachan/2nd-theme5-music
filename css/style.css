@@ -291,16 +291,21 @@ meter {
   }
 }
 
-.c-bread a {
+.c-bread a,
+.c-bread p {
   font-size: 1.6rem;
   line-height: 1.25;
-  -webkit-transition: opacity 0.4s;
-  transition: opacity 0.4s;
 }
 @media (min-width: 768px) {
-  .c-bread a {
+  .c-bread a,
+  .c-bread p {
     line-height: 2.0625;
   }
+}
+
+.c-bread a {
+  -webkit-transition: opacity 0.4s;
+  transition: opacity 0.4s;
 }
 @media (any-hover: hover) {
   .c-bread a:hover {
@@ -596,7 +601,8 @@ meter {
   }
 }
 
-.c-pagination a {
+.c-pagination a,
+.c-pagination span.is-active {
   font-size: 1.6rem;
   line-height: 1.75;
   color: #000000;
@@ -613,11 +619,12 @@ meter {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-transition: opacity 0.4s;
-  transition: opacity 0.4s;
+  -webkit-transition: background-color 0.4s, color 0.4s;
+  transition: background-color 0.4s, color 0.4s;
 }
 @media (min-width: 768px) {
-  .c-pagination a {
+  .c-pagination a,
+  .c-pagination span.is-active {
     font-size: 1.8rem;
     line-height: 1.6666666667;
     width: 5rem;
@@ -625,18 +632,19 @@ meter {
   }
 }
 @media (any-hover: hover) {
-  .c-pagination a:hover {
+  .c-pagination a:hover,
+  .c-pagination span.is-active:hover {
     background-color: #000000;
     color: #fff;
   }
 }
 
-.c-pagination a.is-active {
+.c-pagination span.is-active {
   background-color: #000000;
   color: #fff;
 }
 
-.c-pagination span {
+.c-pagination span.leader {
   font-size: 1.6rem;
   line-height: 1.75;
   width: 3.1rem;
@@ -652,7 +660,7 @@ meter {
           align-items: center;
 }
 @media (min-width: 768px) {
-  .c-pagination span {
+  .c-pagination span.leader {
     font-size: 1.8rem;
     line-height: 1.6666666667;
     width: 3.7rem;
@@ -665,6 +673,10 @@ meter {
   width: 13.62px;
   height: 9.24px;
   position: relative;
+  -webkit-transition: -webkit-transform 0.35s ease-in-out;
+  transition: -webkit-transform 0.35s ease-in-out;
+  transition: transform 0.35s ease-in-out;
+  transition: transform 0.35s ease-in-out, -webkit-transform 0.35s ease-in-out;
 }
 
 .j-question.active .c-qa-arrow {
@@ -883,13 +895,12 @@ meter {
           justify-content: space-between;
 }
 
-.p-archive-blog-list__search-result h1,
 .p-archive-blog-list__search-result p {
   font-size: 1.8rem;
   line-height: 1.6666666667;
 }
 
-.p-archive-blog-list__search-result h1 span {
+.p-archive-blog-list__search-result p span {
   font-weight: 700;
 }
 
@@ -1932,7 +1943,9 @@ textarea::placeholder {
 
 .p-form__item-text .p-form__label {
   line-height: 1;
-  padding-bottom: 0.9rem;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  margin-top: 1rem;
 }
 .p-form__item-text .p-form__label label {
   line-height: 1;
@@ -2526,16 +2539,17 @@ textarea::placeholder {
 .p-page-price-price__table table {
   width: 67rem;
   table-layout: fixed;
+  margin-inline: auto;
 }
 @media (min-width: 768px) {
   .p-page-price-price__table table {
-    width: 88rem;
+    width: 100%;
   }
 }
 
 .p-page-price-price__table th,
 .p-page-price-price__table td {
-  width: 16.75rem;
+  width: 25%;
   padding-inline: 1rem;
   padding-block: 0.6rem 0;
   vertical-align: middle;
@@ -2543,7 +2557,6 @@ textarea::placeholder {
 @media (min-width: 768px) {
   .p-page-price-price__table th,
   .p-page-price-price__table td {
-    width: 22rem;
     padding-inline: 2rem;
   }
 }
@@ -3151,12 +3164,21 @@ textarea::placeholder {
   width: 5.4rem;
   height: 5.4rem;
   background: #000;
+  border: #000;
   cursor: pointer;
+  -webkit-transition: opacity 0.4s;
+  transition: opacity 0.4s;
 }
 @media (min-width: 768px) {
   .p-side-search button {
     width: 4rem;
     height: 4rem;
+  }
+}
+@media (any-hover: hover) {
+  .p-side-search button:hover {
+    opacity: 0.7;
+    background: #000;
   }
 }
 
@@ -3518,14 +3540,14 @@ textarea::placeholder {
 .p-top-dream__text::after {
   content: "";
   display: block;
-  background: url("../image/about_arch-sp.png") no-repeat center/contain;
+  background: url("../image/about_arch-sp.svg") no-repeat center/contain;
   width: 100%;
   aspect-ratio: 335/37.09;
   margin-top: 2rem;
 }
 @media (min-width: 768px) {
   .p-top-dream__text::after {
-    background: url("../image/about_arch-pc.png") no-repeat center/contain;
+    background: url("../image/about_arch-pc.svg") no-repeat center/contain;
     width: 79.4444444444vw;
     aspect-ratio: 858/56;
     margin-top: 3.4rem;
@@ -3991,6 +4013,7 @@ textarea::placeholder {
   inset: 0;
   background-color: rgba(80, 80, 80, 0.502);
   z-index: 10;
+  mix-blend-mode: multiply;
 }
 
 .p-top-mv__image img {
@@ -4169,11 +4192,7 @@ textarea::placeholder {
 }
 
 @media (any-hover: hover) {
-  .p-top-voice-card a:hover .p-top-voice-card__media img {
-    -webkit-transform: scale(1.1);
-            transform: scale(1.1);
-  }
-  .p-top-voice-card a:hover .p-top-voice-card__body {
+  .p-top-voice-card a:hover {
     opacity: 0.7;
   }
 }
@@ -4214,7 +4233,17 @@ textarea::placeholder {
   position: absolute;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
+  cursor: pointer;
+  -webkit-transition: opacity 0.4s;
+  transition: opacity 0.4s;
 }
+@media (any-hover: hover) {
+  .swiper-button-prev:hover,
+  .swiper-button-next:hover {
+    opacity: 0.7;
+  }
+}
+
 @media (min-width: 768px) {
   .p-top-voice__contents .swiper-button-prev {
     left: -4rem;

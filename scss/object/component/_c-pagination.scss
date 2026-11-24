@@ -11,7 +11,8 @@
   }
 }
 
-.c-pagination a {
+.c-pagination a,
+.c-pagination span.is-active {
   font-size: 1.6rem;
   line-height: calc(28 / 16);
   color: $color-main;
@@ -23,7 +24,7 @@
   align-items: center;
   justify-content: center;
 
-  transition: opacity 0.4s;
+  transition: background-color 0.4s, color 0.4s;
 
   @include mq(md) {
     font-size: 1.8rem;
@@ -40,12 +41,13 @@
   }
 }
 
-.c-pagination a.is-active {
+// .c-pagination a.is-active {
+.c-pagination span.is-active {
   background-color: $color-main;
   color: $color-white;
 }
 
-.c-pagination span {
+.c-pagination span.leader {
   font-size: 1.6rem;
   line-height: calc(28 / 16);
   width: calc(1.7rem + .7rem * 2);

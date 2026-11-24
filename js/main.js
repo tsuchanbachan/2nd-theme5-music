@@ -50,6 +50,10 @@ $(function() {
     $(this).next().slideToggle();
   });
 
+  $('.j-answer').on('click', function(){
+    $(this).prev('.j-question').removeClass('active');
+    $(this).slideUp();
+  });
 
 
   // ToTop

@@ -8,6 +8,8 @@
   width: 13.62px;
   height: 9.24px;
   position: relative;
+
+  transition: transform 0.35s ease-in-out; // この1行を追加
 }
 
 .j-question.active .c-qa-arrow {

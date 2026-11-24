@@ -30,26 +30,29 @@
     overflow-x: visible;
   }
 }
+
 .p-page-price-price__table table {
   width: 67rem;
   table-layout: fixed;
-  // border-collapse: collapse;
+  margin-inline: auto;
 
   @include mq(md) {
-    width: 88rem;
+    // width: 88rem;
+    width: 100%;
   }
 }
 
 .p-page-price-price__table th,
 .p-page-price-price__table td {
-  width: 16.75rem;
+  // width: 16.75rem;
+  width: 25%;
   padding-inline: 1rem;
   padding-block: .6rem 0;
   // 縦中央。inline、inline-block、テーブルのみ有効
   vertical-align: middle;
 
   @include mq(md) {
-    width: 22rem;
+    // width: 22rem;
     padding-inline: 2rem;
   }
 }

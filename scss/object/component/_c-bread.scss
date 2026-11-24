@@ -46,14 +46,18 @@
   }
 }
 
-.c-bread a {
+.c-bread a,
+.c-bread p {
   font-size: 1.6rem;
   line-height: calc(20 / 16);
-  transition: opacity .4s;
 
   @include mq(md) {
     line-height: calc(33 / 16);
   }
+}
+
+.c-bread a {
+  transition: opacity .4s;
 
   @media (any-hover: hover) {
     &:hover {

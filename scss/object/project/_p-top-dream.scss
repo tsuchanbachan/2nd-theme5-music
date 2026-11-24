@@ -27,13 +27,14 @@
 .p-top-dream__text::after {
   content: '';
   display: block;
-  background: url("../image/about_arch-sp.png") no-repeat center / contain;
+  background: url("../image/about_arch-sp.svg") no-repeat center / contain;
   width: 100%;
   aspect-ratio: 335 / 37.09;
   margin-top: 2rem;
 
   @include mq(md) {
-    background: url("../image/about_arch-pc.png") no-repeat center / contain;
+    // background: url("../image/about_arch-pc.png") no-repeat center / contain;
+    background: url("../image/about_arch-pc.svg") no-repeat center / contain;
     width: calc(858 / 1080 * 100vw);
     aspect-ratio: 858 / 56;
     margin-top: 3.4rem;

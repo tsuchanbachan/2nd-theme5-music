@@ -16,12 +16,13 @@
   display: flex;
   justify-content: space-between;
 }
-.p-archive-blog-list__search-result h1,
+
 .p-archive-blog-list__search-result p {
   font-size: 1.8rem;
   line-height: calc(30 / 18);
 }
-.p-archive-blog-list__search-result h1 span {
+
+.p-archive-blog-list__search-result p span {
   font-weight: $font-bold;
 }
 .p-archive-blog-list__contents {

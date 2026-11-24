@@ -63,9 +63,9 @@ textarea {
   width: 100%;
   // 謎の余白防止
   display: block;
-  // word-break: keep-all;
-  // 日本語を自然に改行、URLや長い英単語だけはちゃんと折り返す
   word-break: keep-all;
+  // 日本語を自然に改行、URLや長い英単語だけはちゃんと折り返す
+  // word-break: keep-all;
   overflow-wrap: break-word;
 
   @include mq(md) {
@@ -245,7 +245,9 @@ textarea::placeholder {
 
   .p-form__label {
     line-height: 1;
-    padding-bottom: .9rem;
+    // padding-bottom: .9rem;
+    align-self: flex-start;
+    margin-top: 1rem;
 
     label {
       line-height: 1;

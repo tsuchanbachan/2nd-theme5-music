@@ -1,24 +1,30 @@
 @use "sass:map";
 @use '../../global' as *;
 
+.p-result-detail__column {
+  // padding-bottom: 19.7rem;
+  
+  // @include mq(md) {
+  //   padding-bottom: 15.7rem;
+  // }
+}
 
 // セクション
 .p-result-detail__article {
-  margin-top: 5.0rem;
-  margin-bottom: 6rem;
-
+  padding-top: 5.0rem;
+  padding-bottom: 6rem;
+  
   @include mq(md) {
-    margin-top: 7.0rem;
-    margin-bottom: 10.1rem;
+    padding-top: 7.0rem;
+    padding-bottom: 10.1rem;
   }
 }
 
 // 関連記事
 .p-result-detail__connection {
-  margin-bottom: 19.7rem;
+  padding-bottom: 19.7rem;
   
   @include mq(md) {
-    margin-bottom: 15.7rem;
+    padding-bottom: 15.7rem;
   }
 }
-

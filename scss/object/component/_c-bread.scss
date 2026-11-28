@@ -13,18 +13,12 @@
 }
 
 .c-bread ol {
-  padding-inline: 2rem;
-  // padding-block: .3rem 0;
   padding-block: .6rem .1rem;
-  margin-inline: auto;
-  max-width: 940px;
-
   display: flex;
   flex-wrap: wrap;
   column-gap: 2.1rem;
 
   @include mq(md) {
-    padding-inline: 3rem;
     padding-block: 1rem .7rem;
   }
 }

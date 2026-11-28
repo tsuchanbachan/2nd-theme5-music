@@ -9,18 +9,25 @@
 
 .p-blog-detail__column {
   margin-top: 5.4rem;
-  display: flex;
-  flex-direction: column;
-  row-gap: 3rem;
   margin-bottom: 19.7rem;
 
   @include mq(md) {
-    flex-direction: row;
-    column-gap: calc(30 / 880 * 100%);
-
     margin-top: 7rem;
     margin-bottom: 18.7rem;
   }
+}
+
+.p-blog-detail__inner {
+  display: flex;
+  flex-direction: column;
+  row-gap: 3rem;
+  
+  @include mq(md) {
+    flex-direction: row;
+    column-gap: calc(30 / 880 * 100%);
+  
+  }
+
 }
 
 .p-blog-detail__column-contents {
